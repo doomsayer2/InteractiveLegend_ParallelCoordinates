@@ -1,5 +1,5 @@
-# InteractiveLegend - Barchart
-This is just a clone of the original template which implements the barchart visualization.
+# InteractiveLegend - Parallel Coordinates
+This is just a clone of the original template which implements the parallel coordinates visualization.
 <br/>
 Original: [Interactive Legend](https://github.com/doomsayer2/InteractiveLegend)
 
