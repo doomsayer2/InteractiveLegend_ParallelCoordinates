@@ -1,0 +1,41 @@
+#pcChart {
+    /* position: relative;
+    float: left;
+    top: 20px; */
+}
+
+/* Change overall text size */
+#pcChart text {
+    font-family: sans-serif;
+    font-size: 0.6em;
+}
+
+/* Change the axes labels */
+.dimension .label {
+    cursor: pointer !important;
+    font-weight: bold;
+    transform: translate(0, -8);
+}
+
+.tick text {
+    cursor: default !important;
+}
+
+#tooltip {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+rect.background {
+    fill: none;
+}
+
+.brush {
+    opacity: 0.1;
+}
+
+.domain {
+    fill: darkgray;
+}

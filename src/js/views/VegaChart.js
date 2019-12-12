@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import VegaLite from 'react-vega-lite';
 import { Handler } from 'vega-tooltip';
-import { getData } from './shared/DataProvider';
+import { getData } from '../shared/DataProvider';
 
 export default class VegaChart extends Component {
   constructor(props) {

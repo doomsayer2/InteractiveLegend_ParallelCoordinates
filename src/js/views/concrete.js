@@ -1,29 +1,30 @@
-const sourceData = require("./data/tempAllCities.json"); // All cities data
+const sourceData = require("./data/cars.json"); // All cities data
 
 const TEXTS = {
-  ONE: "The chart is based on colored cells.",
+  ONE: "First Text",
   THREE:
-    'The <span class="hT">average temperature change</span> per <span class="hT">month</span> is plotted in columns and the <span class="hT">cities</span> in rows. ',
+    '<span class="hT">Second</span> Text',
   TWO:
-    'A dark color indicates a big and a light color a small <span class="hT">difference in average temperature</span> (<span class="hT">blue</span> = negative value change, <span class="hT">white</span> = no change, <span class="hT">brown</span> = positive value change).',
+    'Third Text',
   FOUR:
-    '<span class="hT">Munich</span> shows a large negative temperature change between the two years in <span class="hT">February</span>.',
+    'Fourth Text',
   FIVE:
-    'In <span class="hT">Tallinn</span>, the <span class="hT">average temperature</span> increased in the last <span class="hT">quarter</span>.',
+    'Fifth Text',
   SIX:
-    'Across all <span class="hT">cities</span>, there is more change (darker color) visible in the <span class="hT">first half</span> of the year than in the <span class="hT">second half</span> of the year.'
+    'Sixth Text'
 };
 
 const TEXTGROUPS = {
   g1: "Reading",
-  g2: "Using"
+  g2: "Interact",
+  g3: "Using"
 };
 
 export class ConcreteDataProvider {
   getVizData(chartID) {
     switch (chartID) {
       case 1:
-        return this.viz;
+        return sourceData;
       default:
         return this.viz;
     }
