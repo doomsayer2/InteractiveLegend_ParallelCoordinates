@@ -25,6 +25,7 @@ export default class D3Chart extends Component {
       .data(this.data)
       .margin({ top: 30, left: 3 * textLength, bottom: 40, right: 0 })
       .alpha(0.6)
+      .color('darkgrey')
       // .mode('queue')
       // .rate(5)
       .render()
@@ -39,10 +40,11 @@ export default class D3Chart extends Component {
         <div
           ref={this.chartRef}
           id={'pcChart'}
-          style={{ width: 100 + '%', height: 500 }}
+          style={{ width: 100 + '%', height: 600 }}
           className={'parcoords'}
         />
       </Fragment>
     );
   }
 }
+
