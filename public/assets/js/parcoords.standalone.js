@@ -13301,7 +13301,6 @@
       singlePath(config, position, d, ctx);
     }
     ctx.stroke();
-    config.color = "darkgrey";
   };
 
   var _functor = function _functor(v) {
@@ -13501,6 +13500,7 @@
       selectAll([canvas.foreground, canvas.brushed]).classed('faded', true);
       data.forEach(pathHighlight(config, ctx, position));
       events.call('highlight', this, data);
+      config.color = "darkgrey";
       return this;
     };
   };
