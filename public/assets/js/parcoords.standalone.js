@@ -13469,6 +13469,7 @@
   };
 
   var pathHighlight = function pathHighlight(config, ctx, position) {
+    config.color = "orange";
     return function(d, i) {
       ctx.highlight.strokeStyle = _functor(config.color)(d, i);
       return colorPath(config, position, d, ctx.highlight);

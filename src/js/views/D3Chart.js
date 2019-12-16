@@ -55,6 +55,11 @@ export default class D3Chart extends Component {
       .alphaOnBrushed(0.5) // This lets the other lines still be visible when the brush or slected are viewed
       .interactive(); // Trigger the rerenders when changed after render
 
+    // Custom adaptations based on the current data
+    graph.scale('Acceleration (mph)', [14, 23]);
+    graph.scale('Horsepower (hp)', [40, 340]);
+    graph.scale('Weight (lbs)', [1400, 5600]);
+
     // 2nd Add hover event
     d3.select('#pcChart svg')
       .on('mousemove', function() {
@@ -91,6 +96,7 @@ export default class D3Chart extends Component {
   }
 }
 
+// Add instruction text below graph
 const createInstructions = () => {
   // add instruction text
   const instructions =
@@ -109,10 +115,8 @@ const createInstructions = () => {
 
 // Add highlight for every line on click
 const getCentroids = data => {
-  // this function returns centroid points for data. I had to change the source
+  // This function returns centroid points for data. Had to change the source
   // for parallelcoordinates and make compute_centroids public.
-  // I assume this should be already somewhere in graph and I don't need to recalculate it
-  // but I couldn't find it so I just wrote this for now
   const margins = graph.margin();
   const graphCentPts = [];
 
@@ -121,7 +125,7 @@ const getCentroids = data => {
       return i % 2 === 0;
     });
 
-    // move points based on margins
+    // Move points based on margins
     const cenPts = initCenPts.map(function(d) {
       return [d[0] + margins['left'], d[1] + margins['top']];
     });
@@ -132,14 +136,15 @@ const getCentroids = data => {
   return graphCentPts;
 };
 
+// Get the active points
 const getActiveData = () => {
-  // I'm pretty sure this data is already somewhere in graph
   if (graph.brushed() !== false) return graph.brushed();
   return graph.data();
 };
 
+// Find out if on line
 const isOnLine = (startPt, endPt, testPt, tol) => {
-  // check if test point is close enough to a line
+  // Check if test point is close enough to a line
   // between startPt and endPt. close enough means smaller than tolerance
   const x0 = testPt[0];
   const y0 = testPt[1];
@@ -157,47 +162,45 @@ const isOnLine = (startPt, endPt, testPt, tol) => {
   return false;
 };
 
+// Fin the axes we are on
 const findAxes = (testPt, cenPts) => {
-  // finds between which two axis the mouse is
+  // Finds between which two axis the mouse is
   const x = testPt[0];
-  const y = testPt[1];
+  // const y = testPt[1];
 
-  // make sure it is inside the range of x
+  // Make sure it is inside the range of x
   if (cenPts[0][0] > x) return false;
   if (cenPts[cenPts.length - 1][0] < x) return false;
 
-  // find between which segment the point is
+  // Find between which segment the point is
   for (let i = 0; i < cenPts.length; i++) {
     if (cenPts[i][0] > x) return i;
   }
 };
 
+// Removes any object under #tooltip is
 const cleanTooltip = () => {
-  // removes any object under #tooltip is
   graph.svg.selectAll('#tooltip').remove();
 };
 
+// Add tooltips to multi lines if they are near
 const addTooltip = (clicked, clickedCenPts) => {
-  // sdd tooltip to multiple clicked lines
   let clickedDataSet = [];
   let margins = graph.margin();
 
-  // get all the values into a single list
-  // I'm pretty sure there is a better way to write this is Javascript
   for (let i = 0; i < clicked.length; i++) {
     for (let j = 0; j < clickedCenPts[i].length; j++) {
       const text = d3.values(clicked[i])[j];
-      // not clean at all!
       const x = clickedCenPts[i][j][0] - margins.left;
       const y = clickedCenPts[i][j][1] - margins.top;
       clickedDataSet.push([x, y, text]);
     }
   }
 
-  // add rectangles
+  // Add rectangles
   const fontSize = 14;
   const padding = 2;
-  const rectHeight = fontSize + 2 * padding; //based on font size
+  const rectHeight = fontSize + 2 * padding; // Based on font size
 
   graph.svg
     .selectAll("rect[id='tooltip']")
@@ -220,7 +223,7 @@ const addTooltip = (clicked, clickedCenPts) => {
     })
     .attr('height', rectHeight);
 
-  // add text on top of rectangle
+  // Add text on top of rectangle
   graph.svg
     .selectAll("text[id='tooltip']")
     .data(clickedDataSet)
@@ -241,32 +244,34 @@ const addTooltip = (clicked, clickedCenPts) => {
     });
 };
 
+// Get the current hovered lines
 const getClickedLines = mouseClick => {
   let clicked = [];
   let clickedCenPts = [];
 
-  // find which data is activated right now
+  // Find which data is activated right now
   const activeData = getActiveData();
 
-  // find centriod points
+  // Find centriod points
   const graphCentPts = getCentroids(activeData);
 
   if (graphCentPts.length === 0) return false;
 
-  // find between which axes the point is
+  // Find between which axes the point is
   const axeNum = findAxes(mouseClick, graphCentPts[0]);
   if (!axeNum) return false;
 
   graphCentPts.forEach(function(d, i) {
     if (isOnLine(d[axeNum - 1], d[axeNum], mouseClick, 2)) {
       clicked.push(activeData[i]);
-      clickedCenPts.push(graphCentPts[i]); // for tooltip
+      clickedCenPts.push(graphCentPts[i]); // For tooltip
     }
   });
 
   return [clicked, clickedCenPts];
 };
 
+// Actually highlight the lines clicked
 const highlightLineOnClick = (mouseClick, drawTooltip) => {
   let clicked = [];
   let clickedCenPts = [];
@@ -277,13 +282,11 @@ const highlightLineOnClick = (mouseClick, drawTooltip) => {
     clicked = clickedData[0];
     clickedCenPts = clickedData[1];
 
-    // highlight clicked line
+    // Highlight clicked line
     graph.highlight(clicked);
-
+    
     if (drawTooltip) {
-      // clean if anything is there
       cleanTooltip();
-      // add tooltip
       addTooltip(clicked, clickedCenPts);
     }
   }
