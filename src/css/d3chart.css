@@ -31,10 +31,10 @@
 rect.background {
     fill: none;
 }
-
+/* 
 .brush {
     opacity: 0.1;
-}
+} */
 
 .domain {
     fill: darkgray;
