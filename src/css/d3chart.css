@@ -12,7 +12,7 @@
 
 /* Change the axes labels */
 .dimension .label {
-    cursor: pointer !important;
+    cursor: move !important;
     font-weight: bold;
     transform: translate(0, -8);
 }

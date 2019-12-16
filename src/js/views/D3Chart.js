@@ -59,6 +59,7 @@ export default class D3Chart extends Component {
     graph.scale('Acceleration (mph)', [14, 23]);
     graph.scale('Horsepower (hp)', [40, 340]);
     graph.scale('Weight (lbs)', [1400, 5600]);
+    graph.flipAxes(['Name']);
 
     // 2nd Add hover event
     d3.select('#pcChart svg')
@@ -284,7 +285,7 @@ const highlightLineOnClick = (mouseClick, drawTooltip) => {
 
     // Highlight clicked line
     graph.highlight(clicked);
-    
+
     if (drawTooltip) {
       cleanTooltip();
       addTooltip(clicked, clickedCenPts);

@@ -8361,7 +8361,7 @@
           'translate(0,-5) rotate(' + config.dimensionTitleRotation + ')'
         )
         .text(dimensionLabels(config))
-        .on('dblclick', flipAxisAndUpdatePCP(config, pc, axis))
+        // .on('dblclick', flipAxisAndUpdatePCP(config, pc, axis))
         .on('wheel', rotateLabels(config, pc));
 
       // Update
@@ -11255,9 +11255,9 @@
                   }
                 })
             );
-            select(this).on('dblclick', function() {
-              pc.brushReset(d);
-            });
+            // select(this).on('dblclick', function() {
+            //   pc.brushReset(d);
+            // });
           }
         });
 
@@ -11412,7 +11412,7 @@
         .attr('x', 0)
         .attr('class', 'label')
         .text(dimensionLabels(config))
-        .on('dblclick', flipAxisAndUpdatePCP(config, pc, axis))
+        // .on('dblclick', flipAxisAndUpdatePCP(config, pc, axis))
         .on('wheel', rotateLabels(config, pc));
 
       if (config.nullValueSeparator === 'top') {
@@ -13301,6 +13301,7 @@
       singlePath(config, position, d, ctx);
     }
     ctx.stroke();
+    config.color = "darkgrey";
   };
 
   var _functor = function _functor(v) {
