@@ -61,6 +61,11 @@ export default class D3Chart extends Component {
     graph.scale('Weight (lbs)', [1400, 5600]);
     graph.flipAxes(['Name']);
 
+    // Move labels up a bit (needs to be in timeout if we want to modify it after the draw of the viz)
+    setTimeout(() => {
+      d3.selectAll('.label').attr('transform', 'translate(0, -10)');
+    }, 1);
+
     // 2nd Add hover event
     d3.select('#pcChart svg')
       .on('mousemove', function() {
