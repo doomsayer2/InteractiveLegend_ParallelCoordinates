@@ -11,10 +11,16 @@ const LoadingIndicator = props => {
 };
 
 const OnboardingLogo = () => {
-  return (
-    <img id="onboardingLogo" alt="Onboarding" src="onboarding_logo.svg" />
-  );
-}
+  return <img id="onboardingLogo" alt="Onboarding" src="onboarding_logo.svg" />;
+};
+
+const getScreenSize = windowWidth => {
+  if (windowWidth <= 400) return { height: 100 };
+  if (windowWidth > 400 && windowWidth <= 768) return { height: 120 };
+  if (windowWidth > 768 && windowWidth <= 992) return { height: 400 };
+  if (windowWidth > 992 && windowWidth <= 1200) return { height: 150 };
+  if (windowWidth > 1200) return { width: 700, height: 150 };
+};
 
 /**
  * (C) Karl Rathmanner
@@ -29,4 +35,4 @@ const moveElementsToNewParent = (ids, targetId) => {
   });
 };
 
-export { LoadingIndicator, OnboardingLogo ,moveElementsToNewParent };
+export { LoadingIndicator, OnboardingLogo, moveElementsToNewParent, getScreenSize };
