@@ -1,8 +1,9 @@
 import * as d3 from 'd3';
 
 const createHintOne = () => {
-  console.log('Hint 1', d3.select('canvas'));
+  console.log('Hint 1');
 
+  d3.select('svg').select('g').select('g').append('circle').attr('cx', 10).attr('cy', 100).attr('r', 10).attr('fill', 'green');
   return 1;
 };
 
