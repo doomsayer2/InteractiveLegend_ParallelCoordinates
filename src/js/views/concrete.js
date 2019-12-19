@@ -1,17 +1,16 @@
 const sourceData = require('./data/cars.json'); // All cities data
 
 const TEXTS = {
-  ONE: 'First Text',
-  TWO: '<span class="hT">Second</span> Text',
-  THREE: 'Third Text',
-  FOUR: 'Fourth Text',
-  FIVE: 'Fifth Text',
-  SIX: 'Sixth Text',
-  SEVEN: 'Seventh Text',
-  EIGHT: 'Eighth Text',
-  NINE: 'Nineth Text',
-  TEN: 'Tenth Text',
-  ELEVEN: 'Eleventh Text'
+  ONE: 'Each <span class="hT">vertical axis</span> represents one attribute (e.g., acceleration).',
+  TWO: 'Each line going through all axes represents a specific <span class="hT">car type</span> (e.g., Mazda RX4) and its <span class="hT">attribute</span> values (e.g., Mazda RX4 has 6 cylinders).',
+  THREE: 'Parallel lines between two adjacent axes indicate a <span class="hT">positive correlation</span> (e.g., more horsepower means heavier cars).',
+  FOUR: 'Crossing/intersecting lines between two adjacent axes (like an X-shape) show a <span class="hT">negative correlation</span> (e.g., the higher the horsepower, the lower the acceleration (mph)). ',
+  FIVE: 'Placing two axes next to each other helps to analyze their <span class="hT">relationship</span>. e.g. click on the header <span class="hT">XY</span> and move it to the right side of <span class="hT">YZ</span>. You can now analyze the relationship (line pattern) between the axis left and right to XY.',
+  SIX: '<span class="hT">Filter</span> the data based on the attribute values of one or multiple axes by createing a box by <span class="hT">clicking-and-dragging</span> at the same time the desired value range (multiple-selections are possible).',
+  SEVEN: 'The <span class="hT">acceleration</span>) of the car <span class="ht">Valiant</span> is <span class="hT">20.2 mph</span>.',
+  EIGHT: '<span class="hT">Maserati Bora</span> has 8 <span class="hT">cylinders</span>, a <span class="hT">horsepower</span> of 337.0 hp, an <span class="hT">acceleration</span> of 14.65 mph, a <span class="hT">weight</span> of 3.56 lbs, and was <span class="hT">produced</span> in 1972 ',
+  NINE: 'The car <span class="hT">Lincoln Continental</span> has a higher <span class="hT">weight</span> than the <span class="hT">Lotus Europa</span>.',
+  TEN: 'The <span class="hT">more cylinders</span> a car has, the <span class="hT">more Horsepower (hp)</span> it has.'
 };
 
 const TEXTGROUPS = {
@@ -174,10 +173,6 @@ export class ConcreteDataProvider {
         },
         {
           h10: `<div class="vizHint">${TEXTS.TEN}</div>`,
-          group: `${TEXTGROUPS.g2}`
-        },
-        {
-          h11: `<div class="vizHint">${TEXTS.ELEVEN}</div>`,
           group: `${TEXTGROUPS.g2}`
         }
       ]

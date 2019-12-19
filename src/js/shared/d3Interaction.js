@@ -61,9 +61,9 @@ const makeLegendBoxes = () => {
     .append('legend')
     .text('Using the Chart');
 
-  moveElementsToNewParent(['step-0', 'step-1', 'step-2', 'step-3', 'step-4'], 'reading');
-  moveElementsToNewParent(['step-5', 'step-6'], 'interacting');
-  moveElementsToNewParent(['step-7', 'step-8', 'step-9', 'step-10'], 'using');
+  moveElementsToNewParent(['step-0', 'step-1', 'step-2', 'step-3'], 'reading');
+  moveElementsToNewParent(['step-4', 'step-5'], 'interacting');
+  moveElementsToNewParent(['step-6', 'step-7', 'step-8', 'step-9'], 'using');
 };
 
 /** FOR STATIC LEGEND BOXES NECESSARY */
@@ -84,9 +84,9 @@ const makeStaticLegendBoxes = () => {
     .append('legend')
     .text('Using the Chart');
 
-  moveElementsToNewParent(['stepS-0', 'stepS-1', 'stepS-2', 'stepS-3', 'stepS-4'], 'reading2');
-  moveElementsToNewParent(['stepS-5', 'stepS-6'], 'interacting2');
-  moveElementsToNewParent(['stepS-7', 'stepS-8', 'stepS-9', 'stepS-10'], 'using2');
+  moveElementsToNewParent(['stepS-0', 'stepS-1', 'stepS-2', 'stepS-3'], 'reading2');
+  moveElementsToNewParent(['stepS-4', 'stepS-5'], 'interacting2');
+  moveElementsToNewParent(['stepS-6', 'stepS-7', 'stepS-8', 'stepS-9'], 'using2');
 };
 
 export default manageHints;
