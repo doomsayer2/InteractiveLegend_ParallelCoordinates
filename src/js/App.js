@@ -120,7 +120,7 @@ class App extends Component {
             <div id="vizMain">
               <Row type="flex" justify="start">
                 <Col md={15} lg={17} xxl={12}>
-                  <Row type="flex" justify="center">
+                  <Row type="flex" justify="center" style={{marginLeft: -100 + 'px'}}>
                     {/* <VegaChart mode={mode} view={view} chartID={1} /> */}
                     <D3Chart />
                   </Row>

@@ -14,7 +14,7 @@
 .dimension .label {
     cursor: move !important;
     font-weight: bold;
-    transform: translate(0, -8);
+    font-size: 11px !important;
 }
 
 .tick text {

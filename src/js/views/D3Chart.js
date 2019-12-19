@@ -77,10 +77,7 @@ export default class D3Chart extends Component {
         graph.unhighlight();
       });
 
-    // 3rd add instructions and more
-    createInstructions();
-
-    // 4th attach Key listener for brush clearing
+    // 3rd attach Key listener for brush clearing
     document.addEventListener('keydown', function(event) {
       if (event.ctrlKey && event.altKey && event.key === 'd') {
         graph.brushReset();
@@ -94,30 +91,13 @@ export default class D3Chart extends Component {
         <div
           ref={this.chartRef}
           id={'pcChart'}
-          style={{ width: 100 + '%', height: 600 }}
+          style={{ width: 100 + '%', height: 600, marginRight: 10 + 'px' }}
           className={'parcoords'}
         />
       </Fragment>
     );
   }
 }
-
-// Add instruction text below graph
-const createInstructions = () => {
-  // add instruction text
-  const instructions =
-    '-Drag around axis to begin brush. -CTRL + ALT + D to clear brush. -Reorder axes by dragging. -Hover on each line to highlight.';
-
-  d3.select('#pcChart svg')
-    .append('text')
-    .text(instructions)
-    .attr('text-anchor', 'middle')
-    .attr('text-decoration', 'overline')
-    .attr(
-      'transform',
-      'translate(' + graph.width() / 2 + ',' + (graph.height() - 5) + ')'
-    );
-};
 
 // Add highlight for every line on click
 const getCentroids = data => {
@@ -193,10 +173,20 @@ const cleanTooltip = () => {
 const addTooltip = (clicked, clickedCenPts) => {
   let clickedDataSet = [];
   let margins = graph.margin();
+  let order = Object.keys(graph.dimensions());
+  let clickedNew = [];
+  let obj = {}
 
   for (let i = 0; i < clicked.length; i++) {
+    order.forEach((e) => {
+      obj[e] = clicked[i][e];
+    });
+    clickedNew.push(obj);
+  }
+
+  for (let i = 0; i < clickedNew.length; i++) {
     for (let j = 0; j < clickedCenPts[i].length; j++) {
-      const text = d3.values(clicked[i])[j];
+      const text = d3.values(clickedNew[i])[j];
       const x = clickedCenPts[i][j][0] - margins.left;
       const y = clickedCenPts[i][j][1] - margins.top;
       clickedDataSet.push([x, y, text]);

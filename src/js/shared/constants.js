@@ -1,5 +1,5 @@
 export const CONCRETE = 'concrete';
-export const MAX_HINTS = 6;
+export const MAX_HINTS = 11;
 export const PAGE_TITLE = 'Onboarding Survey';
 export const PAGE_SUBTITLE =
   'St. Pölten University of Applied Sciences, Austria';

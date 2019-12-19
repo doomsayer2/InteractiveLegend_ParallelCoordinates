@@ -33,6 +33,7 @@
 
 /* Other */
 #reading,
+#interacting,
 #using {
   border: 1px solid lightgrey;
   padding: 2%;
@@ -40,6 +41,7 @@
 }
 
 #reading2,
+#interacting2,
 #using2 {
   border: 1px solid lightgrey;
   padding: 2%;

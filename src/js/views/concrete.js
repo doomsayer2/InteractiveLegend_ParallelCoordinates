@@ -1,23 +1,23 @@
-const sourceData = require("./data/cars.json"); // All cities data
+const sourceData = require('./data/cars.json'); // All cities data
 
 const TEXTS = {
-  ONE: "First Text",
-  THREE:
-    '<span class="hT">Second</span> Text',
-  TWO:
-    'Third Text',
-  FOUR:
-    'Fourth Text',
-  FIVE:
-    'Fifth Text',
-  SIX:
-    'Sixth Text'
+  ONE: 'First Text',
+  TWO: '<span class="hT">Second</span> Text',
+  THREE: 'Third Text',
+  FOUR: 'Fourth Text',
+  FIVE: 'Fifth Text',
+  SIX: 'Sixth Text',
+  SEVEN: 'Seventh Text',
+  EIGHT: 'Eighth Text',
+  NINE: 'Nineth Text',
+  TEN: 'Tenth Text',
+  ELEVEN: 'Eleventh Text'
 };
 
 const TEXTGROUPS = {
-  g1: "Reading",
-  g2: "Interact",
-  g3: "Using"
+  g1: 'Reading',
+  g2: 'Interact',
+  g3: 'Using'
 };
 
 export class ConcreteDataProvider {
@@ -61,55 +61,55 @@ export class ConcreteDataProvider {
       },
       spec: {
         mark: {
-          type: "rect",
+          type: 'rect',
           tooltip: null
         },
         encoding: {
           y: {
-            field: "a",
-            type: "nominal",
-            title: "City",
+            field: 'a',
+            type: 'nominal',
+            title: 'City',
             axis: {
-              labelColor: "black",
-              tickColor: "white"
+              labelColor: 'black',
+              tickColor: 'white'
             }
           },
           x: {
-            field: "b",
-            type: "ordinal",
-            title: "Month",
+            field: 'b',
+            type: 'ordinal',
+            title: 'Month',
             axis: {
-              orient: "top",
-              labelColor: "black",
+              orient: 'top',
+              labelColor: 'black',
               labelAngle: 0,
-              tickColor: "white"
+              tickColor: 'white'
             }
           },
           color: {
-            field: "c",
-            type: "quantitative"
+            field: 'c',
+            type: 'quantitative'
           }
         },
         layer: [
           {
             mark: {
-              type: "rect"
+              type: 'rect'
             },
             encoding: {
               color: {
-                field: "c",
-                type: "quantitative",
-                title: "Value Change",
+                field: 'c',
+                type: 'quantitative',
+                title: 'Value Change',
                 legend: true,
                 scale: {
                   domain: [-9, 0, 9],
-                  range: ["steelblue", "#FDFDFD", "#D2B48C"]
+                  range: ['steelblue', '#FDFDFD', '#D2B48C']
                 }
               }
             }
           }
         ],
-        config: {        
+        config: {
           scale: {
             rangeStep: 40
           },
@@ -120,74 +120,21 @@ export class ConcreteDataProvider {
             titleFontSize: 14
           },
           legend: {
-            gradientDirection: "horizontal",
+            gradientDirection: 'horizontal',
             titleFontSize: 13,
             labelFontSize: 13
           }
         },
         width: 500,
         height: 170,
-        title: {text: "Average temperature change in °C between 1990 and 1991", fontSize: 15},
+        title: {
+          text: 'Average temperature change in °C between 1990 and 1991',
+          fontSize: 15
+        }
       }
     };
 
-    this.hint_1 = {
-      hintID: 1,
-      text: {
-        h1: `<div class="vizHint">${TEXTS.ONE}</div>`
-      },
-      group: `${TEXTGROUPS.g1}`
-    };
-
-    this.hint_2 = {
-      hintID: 2,
-      text: {
-        h2: `<div class="vizHint">${TEXTS.TWO}</div>`
-      },
-      group: `${TEXTGROUPS.g1}`
-    };
-
-    this.hint_3 = {
-      hintID: 3,
-      text: {
-        h3: `<div class="vizHint">${TEXTS.THREE}</div>`
-      },
-      group: `${TEXTGROUPS.g1}`
-    };
-
-    this.hint_4 = {
-      hintID: 4,
-      text: {
-        h4: `<div class="vizHint">${TEXTS.FOUR}</div>`
-      },
-      group: `${TEXTGROUPS.g2}`
-    };
-
-    this.hint_5 = {
-      hintID: 5,
-      text: {
-        h5: `<div class="vizHint">${TEXTS.FIVE}</div>`
-      },
-      group: `${TEXTGROUPS.g2}`
-    };
-
-    this.hint_6 = {
-      hintID: 6,
-      text: {
-        h6: `<div class="vizHint">${TEXTS.SIX}</div>`
-      },
-      group: `${TEXTGROUPS.g2}`
-    };
-
     this.allHints = {
-      hintIDs: [
-        this.hint_1.hintID,
-        this.hint_2.hintID,
-        this.hint_3.hintID,
-        this.hint_4.hintID,
-        this.hint_5.hintID,
-        this.hint_6.hintID
-      ],
       text: [
         {
           h1: `<div class="vizHint">${TEXTS.ONE}</div>`,
@@ -211,6 +158,26 @@ export class ConcreteDataProvider {
         },
         {
           h6: `<div class="vizHint">${TEXTS.SIX}</div>`,
+          group: `${TEXTGROUPS.g2}`
+        },
+        {
+          h7: `<div class="vizHint">${TEXTS.SEVEN}</div>`,
+          group: `${TEXTGROUPS.g2}`
+        },
+        {
+          h8: `<div class="vizHint">${TEXTS.EIGHT}</div>`,
+          group: `${TEXTGROUPS.g2}`
+        },
+        {
+          h9: `<div class="vizHint">${TEXTS.NINE}</div>`,
+          group: `${TEXTGROUPS.g2}`
+        },
+        {
+          h10: `<div class="vizHint">${TEXTS.TEN}</div>`,
+          group: `${TEXTGROUPS.g2}`
+        },
+        {
+          h11: `<div class="vizHint">${TEXTS.ELEVEN}</div>`,
           group: `${TEXTGROUPS.g2}`
         }
       ]
