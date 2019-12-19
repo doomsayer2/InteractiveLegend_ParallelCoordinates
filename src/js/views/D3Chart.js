@@ -175,13 +175,15 @@ const addTooltip = (clicked, clickedCenPts) => {
   let margins = graph.margin();
   let order = Object.keys(graph.dimensions());
   let clickedNew = [];
-  let obj = {}
+  let obj = {};
 
   for (let i = 0; i < clicked.length; i++) {
-    order.forEach((e) => {
+    // eslint-disable-next-line
+    order.forEach(e => {
       obj[e] = clicked[i][e];
     });
     clickedNew.push(obj);
+    obj = {};
   }
 
   for (let i = 0; i < clickedNew.length; i++) {
