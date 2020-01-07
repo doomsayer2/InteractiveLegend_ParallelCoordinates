@@ -85,6 +85,40 @@ const createHintTwo = () => {
 const createHintThree = () => {
   console.log("Hint 3");
 
+  const horsepower = d3.select(
+    d3
+      .select("svg")
+      .selectAll(".dimension")
+      .nodes()[2]
+  );
+  const power = d3.select(horsepower
+    .select(".axis")
+    .selectAll(".tick")
+    .nodes()[4]);
+
+  const transfrom = power.attr('transform');
+  let powerBox = transfrom.substring(transfrom.indexOf("(") + 1, transfrom.indexOf(")"))
+  .split(",");
+  powerBox = powerBox.map(e => parseInt(e, 0));
+
+  const hint3Group = horsepower.append("g").classed("customD3Hints", true);
+  hint3Group
+    .append("circle")
+    .attr("r", 10)
+    .attr("cx", powerBox[0] - 40)
+    .attr("cy", powerBox[1] + 0)
+    .style("stroke", "#C51B7D")
+    .style("fill", "#C51B7D");
+
+  hint3Group
+    .append("text")
+    .attr("x", powerBox[0] - 15)
+    .attr("y", powerBox[1] + 5)
+    .style("font-size", "14px")
+    .style("font-weight", "bold")
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text("2");
   return 3;
 };
 
