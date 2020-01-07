@@ -11,16 +11,16 @@ const dimensions = {
     type: 'number',
     ticks: 20
   },
-  'Acceleration (mph)': {
-    type: 'number',
-    ticks: 20
-  },
-  'Weight (lbs)': {
+    'Weight (lbs)': {
     type: 'number',
     ticks: 20
   },
   ProdYear: {
     type: 'string'
+  },
+  'Acceleration (mph)': {
+    type: 'number',
+    ticks: 20
   }
 };
 let graph = null;
@@ -44,7 +44,7 @@ export default class D3Chart extends Component {
       .data(this.data)
       .composite('source-over') // Change foreground context https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
       .alpha(1) // Opacity of foregoround lines
-      .margin({ top: 30, left: 100, bottom: 40, right: 0 })
+      .margin({ top: 60, left: 100, bottom: 40, right: 30})
       .dimensions(dimensions) // Custom dimensions
       .color('darkgrey') // Color of the lines
       .render()
