@@ -1,266 +1,258 @@
 [
-    {
-      "Name": "AMC Javelin",
-      "Cylinders": 8,
-      "Horsepower (hp)": 150,
-      "Weight (lbs)": 3435,
-      "ProdYear": 1967,
-      "Acceleration (mph)": 17.3
-    },
-    {
-      "Name": "Cadillac Fleetwood",
-      "Cylinders": 8,
-      "Horsepower (hp)": 205,
-      "Weight (lbs)": 5250,
-      "ProdYear": 1946,
-      "Acceleration (mph)": 17.98
-    },
-    {
-      "Name": "Camaro Z28",
-      "Cylinders": 8,
-      "Horsepower (hp)": 245,
-      "Weight (lbs)": 3840,
-      "ProdYear": 1966,
-      "Acceleration (mph)": 15.41
-    },
-    {
-      "Name": "Chrysler Imperial",
-      "Cylinders": 8,
-      "Horsepower (hp)": 230,
-      "Weight (lbs)": 5345,
-      "ProdYear": 1955,
-      "Acceleration (mph)": 17.42
-    },
-    {
-      "Name": "Datsun 710",
-      "Cylinders": 4,
-      "Horsepower (hp)": 93,
-      "Weight (lbs)": 2320,
-      "ProdYear": 1973,
-      "Acceleration (mph)": 18.61
-    },
-    {
-      "Name": "Dodge Challenger",
-      "Cylinders": 8,
-      "Horsepower (hp)": 150,
-      "Weight (lbs)": 3520,
-      "ProdYear": 1969,
-      "Acceleration (mph)": 16.87
-    },
-    {
-      "Name": "Duster 360",
-      "Cylinders": 8,
-      "Horsepower (hp)": 245,
-      "Weight (lbs)": 3570,
-      "ProdYear": 1970,
-      "Acceleration (mph)": 15.84
-    },
-    {
-      "Name": "Ferrari Dino",
-      "Cylinders": 6,
-      "Horsepower (hp)": 175,
-      "Weight (lbs)": 2770,
-      "ProdYear": 1967,
-      "Acceleration (mph)": 15.5
-    },
-    {
-      "Name": "Fiat 128",
-      "Cylinders": 4,
-      "Horsepower (hp)": 66,
-      "Weight (lbs)": 2200,
-      "ProdYear": 1969,
-      "Acceleration (mph)": 19.47
-    },
-    {
-      "Name": "Fiat X1-9",
-      "Cylinders": 4,
-      "Horsepower (hp)": 66,
-      "Weight (lbs)": 1935,
-      "ProdYear": 1972,
-      "Acceleration (mph)": 18.9
-    },
-    {
-      "Name": "Ford Pantera L",
-      "Cylinders": 8,
-      "Horsepower (hp)": 264,
-      "Weight (lbs)": 3170,
-      "ProdYear": 1971,
-      "Acceleration (mph)": 14.5
-    },
-    {
-      "Name": "Honda Civic",
-      "Cylinders": 4,
-      "Horsepower (hp)": 52,
-      "Weight (lbs)": 1615,
-      "ProdYear": 1972,
-      "Acceleration (mph)": 18.52
-    },
-    {
-      "Name": "Hornet 4 Drive",
-      "Cylinders": 6,
-      "Horsepower (hp)": 110,
-      "Weight (lbs)": 3215,
-      "ProdYear": 1969,
-      "Acceleration (mph)": 19.44
-    },
-    {
-      "Name": "Hornet Sportabout",
-      "Cylinders": 8,
-      "Horsepower (hp)": 175,
-      "Weight (lbs)": 3440,
-      "ProdYear": 1971,
-      "Acceleration (mph)": 17.02
-    },
-    {
-      "Name": "Lincoln Continental",
-      "Cylinders": 8,
-      "Horsepower (hp)": 215,
-      "Weight (lbs)": 5424,
-      "ProdYear": 1940,
-      "Acceleration (mph)": 17.82
-    },
-    {
-      "Name": "Lotus Europa",
-      "Cylinders": 4,
-      "Horsepower (hp)": 113,
-      "Weight (lbs)": 1513,
-      "ProdYear": 1966,
-      "Acceleration (mph)": 16.9
-    },
-    {
-      "Name": "Maserati Bora",
-      "Cylinders": 8,
-      "Horsepower (hp)": 335,
-      "Weight (lbs)": 3570,
-      "ProdYear": 1972,
-      "Acceleration (mph)": 14.6
-    },
-    {
-      "Name": "Mazda RX4",
-      "Cylinders": 6,
-      "Horsepower (hp)": 110,
-      "Weight (lbs)": 2620,
-      "ProdYear": 1972,
-      "Acceleration (mph)": 16.46
-    },
-    {
-      "Name": "Mazda RX4 Wag",
-      "Cylinders": 6,
-      "Horsepower (hp)": 110,
-      "Weight (lbs)": 2875,
-      "ProdYear": 1972,
-      "Acceleration (mph)": 17.02
-    },
-    {
-      "Name": "Merc 230",
-      "Cylinders": 4,
-      "Horsepower (hp)": 95,
-      "Weight (lbs)": 3150,
-      "ProdYear": 1977,
-      "Acceleration (mph)": 22.9
-    },
-    {
-      "Name": "Merc 240D",
-      "Cylinders": 4,
-      "Horsepower (hp)": 62,
-      "Weight (lbs)": 3190,
-      "ProdYear": 1976,
-      "Acceleration (mph)": 20
-    },
-    {
-      "Name": "Merc 280",
-      "Cylinders": 6,
-      "Horsepower (hp)": 123,
-      "Weight (lbs)": 3440,
-      "ProdYear": 1977,
-      "Acceleration (mph)": 18.3
-    },
-    {
-      "Name": "Merc 280C",
-      "Cylinders": 6,
-      "Horsepower (hp)": 123,
-      "Weight (lbs)": 3440,
-      "ProdYear": 1977,
-      "Acceleration (mph)": 18.9
-    },
-    {
-      "Name": "Merc 450SE",
-      "Cylinders": 8,
-      "Horsepower (hp)": 180,
-      "Weight (lbs)": 4070,
-      "ProdYear": 1973,
-      "Acceleration (mph)": 17.4
-    },
-    {
-      "Name": "Merc 450SL",
-      "Cylinders": 8,
-      "Horsepower (hp)": 180,
-      "Weight (lbs)": 3730,
-      "ProdYear": 1972,
-      "Acceleration (mph)": 17.6
-    },
-    {
-      "Name": "Merc 450SLC",
-      "Cylinders": 8,
-      "Horsepower (hp)": 180,
-      "Weight (lbs)": 3780,
-      "ProdYear": 1971,
-      "Acceleration (mph)": 18
-    },
-    {
-      "Name": "Pontiac Firebird",
-      "Cylinders": 8,
-      "Horsepower (hp)": 175,
-      "Weight (lbs)": 3845,
-      "ProdYear": 1967,
-      "Acceleration (mph)": 17.05
-    },
-    {
-      "Name": "Porsche 914-2",
-      "Cylinders": 4,
-      "Horsepower (hp)": 91,
-      "Weight (lbs)": 2140,
-      "ProdYear": 1973,
-      "Acceleration (mph)": 16.7
-    },
-    {
-      "Name": "Toyota Corolla",
-      "Cylinders": 4,
-      "Horsepower (hp)": 65,
-      "Weight (lbs)": 1835,
-      "ProdYear": 1966,
-      "Acceleration (mph)": 19.9
-    },
-    {
-      "Name": "Toyota Corona",
-      "Cylinders": 4,
-      "Horsepower (hp)": 97,
-      "Weight (lbs)": 2465,
-      "ProdYear": 1957,
-      "Acceleration (mph)": 20.01
-    },
-    {
-      "Name": "Chrysler Valiant",
-      "Cylinders": 6,
-      "Horsepower (hp)": 105,
-      "Weight (lbs)": 3460,
-      "ProdYear": 1962,
-      "Acceleration (mph)": 20.22
-    },
-    {
-      "Name": "Volvo 142E",
-      "Cylinders": 4,
-      "Horsepower (hp)": 109,
-      "Weight (lbs)": 2780,
-      "ProdYear": 1966,
-      "Acceleration (mph)": 18.6
-    },
-    {
-      "Name": "",
-      "Cylinders": "",
-      "Horsepower (hp)": "",
-      "Weight (lbs)": "",
-      "ProdYear": "",
-      "Acceleration (mph)": ""
-    }
-  ]
+  {
+    "Name": "AMC Javelin",
+    "Acceleration (mph)": 17.3,
+    "Horsepower (hp)": 150,
+    "Weight (lbs)": 3435,
+    "ProdYear": 1967,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Cadillac Fleetwood",
+    "Acceleration (mph)": 17.98,
+    "Horsepower (hp)": 205,
+    "Weight (lbs)": 5250,
+    "ProdYear": 1946,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Camaro Z28",
+    "Acceleration (mph)": 15.41,
+    "Horsepower (hp)": 245,
+    "Weight (lbs)": 3840,
+    "ProdYear": 1966,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Chrysler Imperial",
+    "Acceleration (mph)": 17.42,
+    "Horsepower (hp)": 230,
+    "Weight (lbs)": 5345,
+    "ProdYear": 1955,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Datsun 710",
+    "Acceleration (mph)": 18.61,
+    "Horsepower (hp)": 93,
+    "Weight (lbs)": 2320,
+    "ProdYear": 1973,
+    "Cylinders": 4
+  },
+  {
+    "Name": "Dodge Challenger",
+    "Acceleration (mph)": 16.87,
+    "Horsepower (hp)": 150,
+    "Weight (lbs)": 3520,
+    "ProdYear": 1969,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Duster 360",
+    "Acceleration (mph)": 15.84,
+    "Horsepower (hp)": 245,
+    "Weight (lbs)": 3570,
+    "ProdYear": 1970,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Ferrari Dino",
+    "Acceleration (mph)": 15.5,
+    "Horsepower (hp)": 175,
+    "Weight (lbs)": 2770,
+    "ProdYear": 1967,
+    "Cylinders": 6
+  },
+  {
+    "Name": "Fiat 128",
+    "Acceleration (mph)": 19.47,
+    "Horsepower (hp)": 66,
+    "Weight (lbs)": 2200,
+    "ProdYear": 1969,
+    "Cylinders": 4
+  },
+  {
+    "Name": "Fiat X1-9",
+    "Acceleration (mph)": 18.9,
+    "Horsepower (hp)": 66,
+    "Weight (lbs)": 1935,
+    "ProdYear": 1972,
+    "Cylinders": 4
+  },
+  {
+    "Name": "Ford Pantera L",
+    "Acceleration (mph)": 14.5,
+    "Horsepower (hp)": 264,
+    "Weight (lbs)": 3170,
+    "ProdYear": 1971,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Honda Civic",
+    "Acceleration (mph)": 18.52,
+    "Horsepower (hp)": 52,
+    "Weight (lbs)": 1615,
+    "ProdYear": 1972,
+    "Cylinders": 4
+  },
+  {
+    "Name": "Hornet 4 Drive",
+    "Acceleration (mph)": 19.44,
+    "Horsepower (hp)": 110,
+    "Weight (lbs)": 3215,
+    "ProdYear": 1969,
+    "Cylinders": 6
+  },
+  {
+    "Name": "Hornet Sportabout",
+    "Acceleration (mph)": 17.02,
+    "Horsepower (hp)": 175,
+    "Weight (lbs)": 3440,
+    "ProdYear": 1971,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Lincoln Continental",
+    "Acceleration (mph)": 17.82,
+    "Horsepower (hp)": 215,
+    "Weight (lbs)": 5424,
+    "ProdYear": 1940,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Lotus Europa",
+    "Acceleration (mph)": 16.9,
+    "Horsepower (hp)": 113,
+    "Weight (lbs)": 1513,
+    "ProdYear": 1966,
+    "Cylinders": 4
+  },
+  {
+    "Name": "Maserati Bora",
+    "Acceleration (mph)": 14.6,
+    "Horsepower (hp)": 335,
+    "Weight (lbs)": 3570,
+    "ProdYear": 1972,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Mazda RX4",
+    "Acceleration (mph)": 16.46,
+    "Horsepower (hp)": 110,
+    "Weight (lbs)": 2620,
+    "ProdYear": 1972,
+    "Cylinders": 6
+  },
+  {
+    "Name": "Mazda RX4 Wag",
+    "Acceleration (mph)": 17.02,
+    "Horsepower (hp)": 110,
+    "Weight (lbs)": 2875,
+    "ProdYear": 1972,
+    "Cylinders": 6
+  },
+  {
+    "Name": "Merc 230",
+    "Acceleration (mph)": 22.9,
+    "Horsepower (hp)": 95,
+    "Weight (lbs)": 3150,
+    "ProdYear": 1977,
+    "Cylinders": 4
+  },
+  {
+    "Name": "Merc 240D",
+    "Acceleration (mph)": 20,
+    "Horsepower (hp)": 62,
+    "Weight (lbs)": 3190,
+    "ProdYear": 1976,
+    "Cylinders": 4
+  },
+  {
+    "Name": "Merc 280",
+    "Acceleration (mph)": 18.3,
+    "Horsepower (hp)": 123,
+    "Weight (lbs)": 3440,
+    "ProdYear": 1977,
+    "Cylinders": 6
+  },
+  {
+    "Name": "Merc 280C",
+    "Acceleration (mph)": 18.9,
+    "Horsepower (hp)": 123,
+    "Weight (lbs)": 3440,
+    "ProdYear": 1977,
+    "Cylinders": 6
+  },
+  {
+    "Name": "Merc 450SE",
+    "Acceleration (mph)": 17.4,
+    "Horsepower (hp)": 180,
+    "Weight (lbs)": 4070,
+    "ProdYear": 1973,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Merc 450SL",
+    "Acceleration (mph)": 17.6,
+    "Horsepower (hp)": 180,
+    "Weight (lbs)": 3730,
+    "ProdYear": 1972,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Merc 450SLC",
+    "Acceleration (mph)": 18,
+    "Horsepower (hp)": 180,
+    "Weight (lbs)": 3780,
+    "ProdYear": 1971,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Pontiac Firebird",
+    "Acceleration (mph)": 17.05,
+    "Horsepower (hp)": 175,
+    "Weight (lbs)": 3845,
+    "ProdYear": 1967,
+    "Cylinders": 8
+  },
+  {
+    "Name": "Porsche 914-2",
+    "Acceleration (mph)": 16.7,
+    "Horsepower (hp)": 91,
+    "Weight (lbs)": 2140,
+    "ProdYear": 1973,
+    "Cylinders": 4
+  },
+  {
+    "Name": "Toyota Corolla",
+    "Acceleration (mph)": 19.9,
+    "Horsepower (hp)": 65,
+    "Weight (lbs)": 1835,
+    "ProdYear": 1966,
+    "Cylinders": 4
+  },
+  {
+    "Name": "Toyota Corona",
+    "Acceleration (mph)": 20.01,
+    "Horsepower (hp)": 97,
+    "Weight (lbs)": 2465,
+    "ProdYear": 1957,
+    "Cylinders": 4
+  },
+  {
+    "Name": "Chrysler Valiant",
+    "Acceleration (mph)": 20.22,
+    "Horsepower (hp)": 105,
+    "Weight (lbs)": 3460,
+    "ProdYear": 1962,
+    "Cylinders": 6
+  },
+  {
+    "Name": "Volvo 142E",
+    "Acceleration (mph)": 18.6,
+    "Horsepower (hp)": 109,
+    "Weight (lbs)": 2780,
+    "ProdYear": 1966,
+    "Cylinders": 4
+  }
+]

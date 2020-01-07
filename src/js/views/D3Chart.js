@@ -6,22 +6,22 @@ import '../../css/d3chart.css';
 
 const dimensions = {
   Name: { type: 'string' },
-  Cylinders: { type: 'number' },
+  'Acceleration (mph)': {
+    type: 'number',
+    ticks: 20
+  },
   'Horsepower (hp)': {
     type: 'number',
     ticks: 20
   },
-    'Weight (lbs)': {
+  'Weight (lbs)': {
     type: 'number',
     ticks: 20
   },
   ProdYear: {
     type: 'string'
   },
-  'Acceleration (mph)': {
-    type: 'number',
-    ticks: 20
-  }
+  Cylinders: { type: 'number' },
 };
 let graph = null;
 
@@ -31,6 +31,9 @@ export default class D3Chart extends Component {
 
     this.data = getData();
     this.chartRef = React.createRef();
+    this.state = {
+      mode: props.mode
+    };
   }
 
   componentDidMount() {
@@ -44,7 +47,7 @@ export default class D3Chart extends Component {
       .data(this.data)
       .composite('source-over') // Change foreground context https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
       .alpha(1) // Opacity of foregoround lines
-      .margin({ top: 60, left: 100, bottom: 40, right: 30})
+      .margin({ top: 60, left: 100, bottom: 40, right: 30 })
       .dimensions(dimensions) // Custom dimensions
       .color('darkgrey') // Color of the lines
       .render()
@@ -93,6 +96,7 @@ export default class D3Chart extends Component {
           id={'pcChart'}
           style={{ width: 100 + '%', height: 600, marginRight: 10 + 'px' }}
           className={'parcoords'}
+          mode={this.state.mode}
         />
       </Fragment>
     );

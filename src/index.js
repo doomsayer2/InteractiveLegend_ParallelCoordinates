@@ -16,8 +16,9 @@ if (window.outerWidth < 1024 && window.outerHeight < 768) {
       confirmButtonColor: '#C51B7D',
       confirmButtonText: 'Understood'
     });
+} else {
+  ReactDOM.render(<App/>, document.getElementById('root'));
 }
 
-ReactDOM.render(<App/>, document.getElementById('root'));
 
 serviceWorker.unregister();

@@ -122,7 +122,7 @@ class App extends Component {
                 <Col md={15} lg={17} xxl={12}>
                   <Row type="flex" justify="center" style={{marginLeft: -100 + 'px'}}>
                     {/* <VegaChart mode={mode} view={view} chartID={1} /> */}
-                    <D3Chart />
+                    <D3Chart mode={mode} />
                   </Row>
                 </Col>
                 <Col md={9} lg={7} xxl={8}>

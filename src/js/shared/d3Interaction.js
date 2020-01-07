@@ -6,10 +6,12 @@ import {
   createHintThree,
   createHintFour,
   createHintFive,
-  createHintSix
+  createHintSix,
+  removeAllHints
 } from './d3Manipulations';
 
 const manageHints = mode => {
+  removeAllHints();
   switch (mode) {
     case 0:
       createHintOne();
