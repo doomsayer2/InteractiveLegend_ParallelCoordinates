@@ -2,20 +2,14 @@ import * as d3 from "d3";
 
 const createHintOne = () => {
   console.log("Hint 1");
-  d3.select("svg")
-    .select("g")
-    .select("g")
-    .append("circle")
-    .attr("cx", 10)
-    .attr("cy", 100)
-    .attr("r", 10)
-    .attr("fill", "green");
+
   const acceleration = d3.select(
     d3
       .select("svg")
       .selectAll(".dimension")
       .nodes()[5]
   );
+
   const axisPath = acceleration.select(".axis").select("path");
   const axisText = acceleration.select(".axis").select("text");
 
@@ -48,6 +42,42 @@ const createHintOne = () => {
 
 const createHintTwo = () => {
   console.log("Hint 2");
+
+  const carType = d3.select(
+    d3
+      .select("svg")
+      .selectAll(".dimension")
+      .nodes()[0]
+  );
+  const car = carType
+    .select(".axis")
+    .selectAll(".tick")
+    .nodes()[19];
+
+  const carText = d3.select(car).select("text");
+
+  const textBox = carText.node().getBBox();
+  const hint2Group = carType.append("g").classed("customD3Hints", true);
+  
+  carText.style("fill", "#c51b7d").style("font-weight", "bold");
+
+  hint2Group
+    .append("circle")
+    .attr("r", 10)
+    .attr("cx", textBox.x - 15)
+    .attr("cy", textBox.y + 300)
+    .style("stroke", "#C51B7D")
+    .style("fill", "#C51B7D");
+
+  hint2Group
+    .append("text")
+    .attr("x", textBox.x - 15)
+    .attr("y", textBox.y + 305)
+    .style("font-size", "14px")
+    .style("font-weight", "bold")
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text("2");
 
   return 2;
 };
@@ -91,6 +121,21 @@ const removeAllHints = () => {
 
   axisPath.style("stroke", "rgb(34, 34, 34)");
   axisText.style("fill", "black");
+
+  const carType = d3.select(
+    d3
+      .select("svg")
+      .selectAll(".dimension")
+      .nodes()[0]
+  );
+
+  const car = carType
+    .select(".axis")
+    .selectAll(".tick")
+    .nodes()[19];
+
+  const carText = d3.select(car).select("text");
+  carText.style("fill", "black").style("font-weight", "normal");
 };
 
 export {
