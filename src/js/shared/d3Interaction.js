@@ -59,6 +59,10 @@ const enableAllHints = () => {
   createHintFour();
   createHintFive();
   createHintSix();
+  createHintSeven();
+  createHintEight();
+  createHintNine();
+  createHintTen();
 };
 
 /** FOR LEGEND BOXES NECESSARY */
