@@ -1,5 +1,4 @@
 import * as d3 from 'd3';
-// import SVGImage from './assets/onboarding_logo.svg';
 
 const createHintOne = () => {
   const cylinders = d3.select(
@@ -220,10 +219,68 @@ const createHintFive = () => {
 };
 
 const createHintSix = () => {
-  console.log('Hint 6');
+  const svgImage = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[4]
+  );
+  const axisLabel = d3.select(svgImage.select('.axis').selectAll('.tick').nodes()[9]);
+  const transfrom = axisLabel.attr('transform');
+  let svgBox = transfrom
+    .substring(transfrom.indexOf('(') + 1, transfrom.indexOf(')'))
+    .split(',');
+  svgBox = svgBox.map(e => parseInt(e, 0));
+  const hint6Group = svgImage.append('g').classed('customD3Hints', true);
 
+  hint6Group
+    .append('circle')
+    .attr('r', 10)
+    .attr('cx', svgBox[0] + 16)
+    .attr('cy', svgBox[1])
+    .style('stroke', '#C51B7D')
+    .style('fill', '#C51B7D');
+
+  hint6Group
+    .append('text')
+    .attr('x', svgBox[0] + 16)
+    .attr('y', svgBox[1] + 5)
+    .style('font-size', '14px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('6');
+
+  hint6Group
+    .append('image')
+    .attr('xlink:href', 'img1.svg')
+    .attr('x', svgBox[0] - 30)
+    .attr('y', svgBox[1])
+    .attr('width', 60)
+    .attr('height', '25%');
+    
   return 6;
 };
+
+const createHintSeven = () => {
+
+  return 7;
+}
+
+const createHintEight = () => {
+
+  return 8;
+}
+
+const createHintNine = () => {
+
+  return 9;
+}
+
+const createHintTen = () => {
+
+  return 10;
+}
 
 const removeAllHints = () => {
   d3.selectAll('.customD3Hints').remove();
@@ -264,5 +321,9 @@ export {
   createHintFour,
   createHintFive,
   createHintSix,
+  createHintSeven,
+  createHintEight,
+  createHintNine,
+  createHintTen,
   removeAllHints
 };
