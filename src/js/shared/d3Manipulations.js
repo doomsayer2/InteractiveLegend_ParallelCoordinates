@@ -1,4 +1,5 @@
 import * as d3 from 'd3';
+// import SVGImage from './assets/onboarding_logo.svg';
 
 const createHintOne = () => {
   const cylinders = d3.select(
@@ -94,6 +95,29 @@ const createHintThree = () => {
   powerBox = powerBox.map(e => parseInt(e, 0));
   const hint3Group = horsepower.append('g').classed('customD3Hints', true);
 
+  const weight = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[3]
+  );
+  const weightA = d3.select(
+    weight
+      .select('.axis')
+      .selectAll('.tick')
+      .nodes()[0]
+  );
+  const transfromA = weightA.attr('transform');
+  let weightBox = transfromA
+    .substring(transfromA.indexOf('(') + 1, transfromA.indexOf(')'))
+    .split(',');
+  weightBox = weightBox.map(e => parseInt(e, 0));
+
+  console.log(powerBox, weightBox);
+  console.log(transfrom, transfromA);
+  console.log(power.node().getBBox());
+  console.log(weightA.node().getBBox());
+
   hint3Group
     .append('circle')
     .attr('r', 10)
@@ -111,17 +135,37 @@ const createHintThree = () => {
     .attr('text-anchor', 'middle')
     .attr('fill', 'white')
     .text('3');
+
+  hint3Group
+    .append('rect')
+    .attr('x', powerBox[0] - 20)
+    .attr('y', powerBox[1] + 5)
+    .attr('width', '20%')
+    .attr('height', '120px')
+    .style('fill', 'transparent')
+    .style('stroke', '#C51B7D');
+
   return 3;
 };
 
 const createHintFour = () => {
-  console.log('Hint 4');
 
   return 4;
 };
 
 const createHintFive = () => {
-  console.log('Hint 5');
+  const svgImage = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[1]
+  );
+  const hint4Group = svgImage.append('g').classed('customD3Hints', true);
+
+  hint4Group.append("image")
+  .attr("xlink:href", 'img2.svg')
+  .attr("width", 100)
+  .attr("height", 100)
 
   return 5;
 };
