@@ -47,7 +47,7 @@ export default class D3Chart extends Component {
       .data(this.data)
       .composite('source-over') // Change foreground context https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
       .alpha(1) // Opacity of foregoround lines
-      .margin({ top: 60, left: 100, bottom: 40, right: 30 })
+      .margin({ top: 60, left: 120, bottom: 40, right: 30 })
       .dimensions(dimensions) // Custom dimensions
       .color('darkgrey') // Color of the lines
       .render()

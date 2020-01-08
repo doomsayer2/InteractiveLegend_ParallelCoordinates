@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="155px" height="319px" viewBox="0 0 155 319" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="129px" height="304px" viewBox="0 0 129 304" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
     <title>Artboard</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <path d="M22,19 L121,19 L121,296 L22,296 L22,19 Z" id="path-1"></path>
+        <path d="M7,4 L106,4 L106,281 L7,281 L7,4 Z" id="path-1"></path>
         <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="99" height="277" fill="white">
             <use xlink:href="#path-1"></use>
         </mask>
     </defs>
     <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <use id="Rectangle" stroke="#C51B7D" mask="url(#mask-2)" stroke-width="6" stroke-dasharray="10" xlink:href="#path-1"></use>
-        <rect id="Rectangle-3" fill="#FFFFFF" x="85" y="259" width="53" height="47"></rect>
-        <g id="Group" transform="translate(98.000000, 272.000000)" stroke="#C51B7D" stroke-linecap="square" stroke-width="4">
+        <use id="Rectangle" stroke="#C51B7D" mask="url(#mask-2)" stroke-width="10" stroke-dasharray="10" xlink:href="#path-1"></use>
+        <rect id="Rectangle-3" fill="#FFFFFF" x="70" y="244" width="53" height="47"></rect>
+        <g id="Group" transform="translate(83.000000, 257.000000)" stroke="#C51B7D" stroke-linecap="square" stroke-width="4">
             <path d="M21.5,0.5 L21.5,42.5" id="Line-2"></path>
             <path d="M42,21 L0,21" id="Line-2"></path>
         </g>

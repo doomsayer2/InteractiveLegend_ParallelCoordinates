@@ -54,16 +54,102 @@ const hint7 = () => {
       .nodes()[12]
   );
 
-//   const transfrom = acc.attr('transform');
-//   let accBox = transfrom
-//     .substring(transfrom.indexOf('(') + 1, transfrom.indexOf(')'))
-//     .split(',');
-//   accBox = accBox.map(e => parseInt(e, 0));
-//   const hint7GroupA = acceleration.append('g').classed('customD3Hints', true);
+  //   const transfrom = acc.attr('transform');
+  //   let accBox = transfrom
+  //     .substring(transfrom.indexOf('(') + 1, transfrom.indexOf(')'))
+  //     .split(',');
+  //   accBox = accBox.map(e => parseInt(e, 0));
+  //   const hint7GroupA = acceleration.append('g').classed('customD3Hints', true);
 };
 
 const hint8 = () => {
+  const carType = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[0]
+  );
+  const car = carType
+    .select('.axis')
+    .selectAll('.tick')
+    .nodes()[17];
+  const carText = d3.select(car).select('text');
+  const textLen = carText.node().getBBox();
+  const carItem = d3.select(car);
+  const transfrom = carItem.attr('transform');
+  let textBox = transfrom
+    .substring(transfrom.indexOf('(') + 1, transfrom.indexOf(')'))
+    .split(',');
+  textBox = textBox.map(e => parseInt(e, 0));
+  const hint8Group = carType.append('g').classed('customD3Hints', true);
 
-}
+  carText.style('fill', '#c51b7d').style('font-weight', 'bold');
 
-export { hint7 };
+  hint8Group
+    .append('circle')
+    .attr('r', 10)
+    .attr('cx', textBox[0] - textLen.width - 28)
+    .attr('cy', textBox[1])
+    .style('stroke', '#C51B7D')
+    .style('fill', '#C51B7D');
+
+  hint8Group
+    .append('text')
+    .attr('x', textBox[0] - textLen.width - 28)
+    .attr('y', textBox[1] + 5)
+    .style('font-size', '14px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('8');
+};
+
+const hint9 = () => {
+  const carType = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[0]
+  );
+  const car = carType
+    .select('.axis')
+    .selectAll('.tick')
+    .nodes()[16];  
+ const car2 = carType
+    .select('.axis')
+    .selectAll('.tick')
+    .nodes()[15];
+  const carText = d3.select(car).select('text');
+  const carText2 = d3.select(car2).select('text');
+  const textLen = carText2.node().getBBox();
+  const carItem = d3.select(car2);
+  const transfrom = carItem.attr('transform');
+  let textBox = transfrom
+    .substring(transfrom.indexOf('(') + 1, transfrom.indexOf(')'))
+    .split(',');
+  textBox = textBox.map(e => parseInt(e, 0));
+  const hint9Group = carType.append('g').classed('customD3Hints', true);
+
+  carText.style('fill', '#c51b7d').style('font-weight', 'bold');
+  carText2.style('fill', '#c51b7d').style('font-weight', 'bold');
+
+  hint9Group
+    .append('circle')
+    .attr('r', 10)
+    .attr('cx', textBox[0] - textLen.width - 30)
+    .attr('cy', textBox[1] + 7)
+    .style('stroke', '#C51B7D')
+    .style('fill', '#C51B7D');
+
+  hint9Group
+    .append('text')
+    .attr('x', textBox[0] - textLen.width - 30)
+    .attr('y', textBox[1] + 12)
+    .style('font-size', '14px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('9');
+};
+
+export { hint7, hint8, hint9 };
