@@ -68,6 +68,16 @@ const hint7 = () => {
     .attr('cy', accBox[1] - 14)
     .style('stroke', '#C51B7D')
     .style('fill', '#C51B7D');
+
+  hint7GroupA
+    .append('text')
+    .attr('x', accBox[0])
+    .attr('y', accBox[1] - 11)
+    .style('font-size', '8px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('7');
 };
 
 const hint8 = () => {
@@ -209,43 +219,93 @@ const hint8 = () => {
 
   hint8GroupA
     .append('circle')
-    .attr('r', 4)
+    .attr('r', 5)
     .attr('cx', accBox[0])
     .attr('cy', accBox[1] - 2)
     .style('stroke', '#C51B7D')
-    .style('fill', '#C51B7D');  
-    
-hint8GroupB
+    .style('fill', '#C51B7D');
+
+  hint8GroupA
+    .append('text')
+    .attr('x', accBox[0])
+    .attr('y', accBox[1] + 1)
+    .style('font-size', '8px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('8');
+
+  hint8GroupB
     .append('circle')
-    .attr('r', 4)
+    .attr('r', 5)
     .attr('cx', hpBox[0])
     .attr('cy', hpBox[1] + 8)
     .style('stroke', '#C51B7D')
     .style('fill', '#C51B7D');
-    
-hint8GroupC
+
+  hint8GroupB
+    .append('text')
+    .attr('x', hpBox[0])
+    .attr('y', hpBox[1] + 11)
+    .style('font-size', '8px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('8');
+
+  hint8GroupC
     .append('circle')
-    .attr('r', 4)
+    .attr('r', 5)
     .attr('cx', weiBox[0])
     .attr('cy', weiBox[1] + 3)
     .style('stroke', '#C51B7D')
     .style('fill', '#C51B7D');
-    
-hint8GroupD
+
+  hint8GroupC
+    .append('text')
+    .attr('x', weiBox[0])
+    .attr('y', weiBox[1] + 6)
+    .style('font-size', '8px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('8');
+
+  hint8GroupD
     .append('circle')
-    .attr('r', 4)
+    .attr('r', 5)
     .attr('cx', yearBox[0])
     .attr('cy', yearBox[1])
     .style('stroke', '#C51B7D')
     .style('fill', '#C51B7D');
 
-hint8GroupE
+  hint8GroupD
+    .append('text')
+    .attr('x', yearBox[0])
+    .attr('y', yearBox[1] + 3)
+    .style('font-size', '8px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('8');
+
+  hint8GroupE
     .append('circle')
-    .attr('r', 4)
+    .attr('r', 5)
     .attr('cx', cylBox[0])
     .attr('cy', cylBox[1])
     .style('stroke', '#C51B7D')
     .style('fill', '#C51B7D');
+
+  hint8GroupE
+    .append('text')
+    .attr('x', cylBox[0])
+    .attr('y', cylBox[1] + 3)
+    .style('font-size', '8px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('8');
 };
 
 const hint9 = () => {

@@ -2,16 +2,16 @@ import * as d3 from 'd3';
 import { hint7, hint8, hint9 } from './d3ManipulationsAddition';
 
 const createHintOne = () => {
-  const cylinders = d3.select(
+  const accel = d3.select(
     d3
       .select('svg')
       .selectAll('.dimension')
-      .nodes()[5]
+      .nodes()[1]
   );
-  const axisPath = cylinders.select('.axis').select('path');
-  const axisText = cylinders.select('.axis').select('text');
+  const axisPath = accel.select('.axis').select('path');
+  const axisText = accel.select('.axis').select('text');
   const textBox = axisText.node().getBBox();
-  const hint1Group = cylinders.append('g').classed('customD3Hints', true);
+  const hint1Group = accel.append('g').classed('customD3Hints', true);
 
   axisPath.style('stroke', '#c51b7d');
   axisText.style('fill', '#c51b7d');
@@ -190,7 +190,7 @@ const createHintFive = () => {
     d3
       .select('svg')
       .selectAll('.dimension')
-      .nodes()[1]
+      .nodes()[3]
   );
   const axisLabel = svgImage.select('.axis').select('text');
   const axisLabelBox = axisLabel.node().getBBox();
@@ -217,8 +217,8 @@ const createHintFive = () => {
   hint5Group
     .append('image')
     .attr('xlink:href', 'img2.svg')
-    .attr('x', axisLabelBox.x - 24)
-    .attr('y', axisLabelBox.y - 36)
+    .attr('x', axisLabelBox.x - 50)
+    .attr('y', axisLabelBox.y - 32)
     .attr('width', 100)
     .attr('height', 40);
 
@@ -297,14 +297,14 @@ const removeAllHints = () => {
   d3.selectAll('.customD3Hints').remove();
 
   // HINT 1 ELEMENTS
-  const cylinders = d3.select(
+  const accel = d3.select(
     d3
       .select('svg')
       .selectAll('.dimension')
-      .nodes()[5]
+      .nodes()[1]
   );
-  const axisPath = cylinders.select('.axis').select('path');
-  const axisText = cylinders.select('.axis').select('text');
+  const axisPath = accel.select('.axis').select('path');
+  const axisText = accel.select('.axis').select('text');
 
   axisPath.style('stroke', 'rgb(34, 34, 34)');
   axisText.style('fill', 'black');
