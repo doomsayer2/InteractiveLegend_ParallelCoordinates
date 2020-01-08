@@ -99,7 +99,7 @@ const createHintThree = () => {
     .append('circle')
     .attr('r', 10)
     .attr('cx', powerBox[0] - 40)
-    .attr('cy', powerBox[1] + 0)
+    .attr('cy', powerBox[1])
     .style('stroke', '#C51B7D')
     .style('fill', '#C51B7D');
 
@@ -151,7 +151,7 @@ const createHintFour = () => {
     .append('circle')
     .attr('r', 10)
     .attr('cx', accBox[0] - 40)
-    .attr('cy', accBox[1] + 0)
+    .attr('cy', accBox[1])
     .style('stroke', '#C51B7D')
     .style('fill', '#C51B7D');
 
@@ -201,7 +201,7 @@ const createHintFive = () => {
   hint5Group
     .append('text')
     .attr('x', axisLabelBox.x + axisLabelBox.width)
-    .attr('y', axisLabelBox.y - 18)
+    .attr('y', axisLabelBox.y - 17)
     .style('font-size', '14px')
     .style('font-weight', 'bold')
     .attr('text-anchor', 'middle')
