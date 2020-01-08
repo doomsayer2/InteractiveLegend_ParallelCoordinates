@@ -95,29 +95,6 @@ const createHintThree = () => {
   powerBox = powerBox.map(e => parseInt(e, 0));
   const hint3Group = horsepower.append('g').classed('customD3Hints', true);
 
-  const weight = d3.select(
-    d3
-      .select('svg')
-      .selectAll('.dimension')
-      .nodes()[3]
-  );
-  const weightA = d3.select(
-    weight
-      .select('.axis')
-      .selectAll('.tick')
-      .nodes()[0]
-  );
-  const transfromA = weightA.attr('transform');
-  let weightBox = transfromA
-    .substring(transfromA.indexOf('(') + 1, transfromA.indexOf(')'))
-    .split(',');
-  weightBox = weightBox.map(e => parseInt(e, 0));
-
-  console.log(powerBox, weightBox);
-  console.log(transfrom, transfromA);
-  console.log(power.node().getBBox());
-  console.log(weightA.node().getBBox());
-
   hint3Group
     .append('circle')
     .attr('r', 10)
@@ -141,14 +118,63 @@ const createHintThree = () => {
     .attr('x', powerBox[0] - 20)
     .attr('y', powerBox[1] + 5)
     .attr('width', '20%')
-    .attr('height', '120px')
+    .attr('height', '100px')
     .style('fill', 'transparent')
-    .style('stroke', '#C51B7D');
+    .style('stroke', '#C51B7D')
+    .style('stroke-dasharray', '10,5')
+    .style('stroke-width', '2');
 
   return 3;
 };
 
 const createHintFour = () => {
+  const acceleration = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[1]
+  );
+  const acc = d3.select(
+    acceleration
+      .select('.axis')
+      .selectAll('.tick')
+      .nodes()[9]
+  );
+  const transfrom = acc.attr('transform');
+  let accBox = transfrom
+    .substring(transfrom.indexOf('(') + 1, transfrom.indexOf(')'))
+    .split(',');
+  accBox = accBox.map(e => parseInt(e, 0));
+  const hint4Group = acceleration.append('g').classed('customD3Hints', true);
+
+  hint4Group
+    .append('circle')
+    .attr('r', 10)
+    .attr('cx', accBox[0] - 40)
+    .attr('cy', accBox[1] + 0)
+    .style('stroke', '#C51B7D')
+    .style('fill', '#C51B7D');
+
+  hint4Group
+    .append('text')
+    .attr('x', accBox[0] - 40)
+    .attr('y', accBox[1] + 5)
+    .style('font-size', '14px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('4');
+
+  hint4Group
+    .append('rect')
+    .attr('x', accBox[0] - 20)
+    .attr('y', accBox[1] + 5)
+    .attr('width', '20%')
+    .attr('height', '100px')
+    .style('fill', 'transparent')
+    .style('stroke', '#C51B7D')
+    .style('stroke-dasharray', '10,5')
+    .style('stroke-width', '2');
 
   return 4;
 };
@@ -162,10 +188,11 @@ const createHintFive = () => {
   );
   const hint4Group = svgImage.append('g').classed('customD3Hints', true);
 
-  hint4Group.append("image")
-  .attr("xlink:href", 'img2.svg')
-  .attr("width", 100)
-  .attr("height", 100)
+  hint4Group
+    .append('image')
+    .attr('xlink:href', 'img2.svg')
+    .attr('width', 100)
+    .attr('height', 100);
 
   return 5;
 };
