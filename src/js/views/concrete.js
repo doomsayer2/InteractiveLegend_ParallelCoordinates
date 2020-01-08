@@ -8,7 +8,7 @@ const TEXTS = {
   FIVE: 'Placing two axes next to each other helps to analyze their <span class="hT">relationship</span>. e.g. click on the header <span class="hT">XY</span> and move it to the right side of <span class="hT">YZ</span>. You can now analyze the relationship (line pattern) between the axis left and right to XY.',
   SIX: '<span class="hT">Filter</span> the data based on attribute values by creating a box through <span class="hT">clicking-and-dragging</span> at the same time over the desired value range (multiple-selections are possible).',
   SEVEN: 'The <span class="hT">acceleration</span>) of the car <span class="ht">Valiant</span> is <span class="hT">20.2 mph</span>.',
-  EIGHT: '<span class="hT">Maserati Bora</span> has 8 <span class="hT">cylinders</span>, a <span class="hT">horsepower</span> of 337.0 hp, an <span class="hT">acceleration</span> of 14.65 mph, a <span class="hT">weight</span> of 3.56 lbs, and was <span class="hT">produced</span> in 1972 ',
+  EIGHT: '<span class="hT">Maserati Bora</span> has 8 <span class="hT">cylinders</span>, a <span class="hT">horsepower</span> of 335.0 hp, an <span class="hT">acceleration</span> of 14.6 mph, a <span class="hT">weight</span> of 3570 lbs, and was <span class="hT">produced</span> in 1972 ',
   NINE: 'The car <span class="hT">Lincoln Continental</span> has a higher <span class="hT">weight</span> than the <span class="hT">Lotus Europa</span>.',
   TEN: 'The <span class="hT">more cylinders</span> a car has, the <span class="hT">more Horsepower (hp)</span> it has.'
 };
