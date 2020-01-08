@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import { hint7, hint8, hint9 } from './d3ManipulationsAddition';
+import { hint7, hint8, hint9, hint10 } from './d3ManipulationsAddition';
 
 const createHintOne = () => {
   const accel = d3.select(
@@ -125,6 +125,15 @@ const createHintThree = () => {
     .attr('y', powerBox[1] + 5)
     .attr('width', '20%')
     .attr('height', '100px')
+    .style('fill', '#C51B7D')
+    .style('opacity', '0.1');
+
+  hint3Group
+    .append('rect')
+    .attr('x', powerBox[0] - 20)
+    .attr('y', powerBox[1] + 5)
+    .attr('width', '20%')
+    .attr('height', '100px')
     .style('fill', 'transparent')
     .style('stroke', '#C51B7D')
     .style('stroke-dasharray', '10,5')
@@ -170,6 +179,15 @@ const createHintFour = () => {
     .attr('text-anchor', 'middle')
     .attr('fill', 'white')
     .text('4');
+
+  hint4Group
+    .append('rect')
+    .attr('x', accBox[0] - 20)
+    .attr('y', accBox[1] + 5)
+    .attr('width', '20%')
+    .attr('height', '100px')
+    .style('fill', '#C51B7D')
+    .style('opacity', '0.1');
 
   hint4Group
     .append('rect')
@@ -269,7 +287,8 @@ const createHintSix = () => {
     .attr('x', svgBox[0] - 50)
     .attr('y', svgBox[1] + 10)
     .attr('width', 80)
-    .attr('height', '22%');
+    .attr('height', '22%')
+    .style('pointer-events', 'none');
 
   return 6;
 };
@@ -290,6 +309,7 @@ const createHintNine = () => {
 };
 
 const createHintTen = () => {
+  hint10();
   return 10;
 };
 
@@ -320,22 +340,22 @@ const removeAllHints = () => {
     .select('.axis')
     .selectAll('.tick')
     .nodes()[19];
-  const carText = d3.select(car).select('text');  
+  const carText = d3.select(car).select('text');
   const car2 = carType
     .select('.axis')
     .selectAll('.tick')
     .nodes()[4];
-  const carText2 = d3.select(car2).select('text');  
+  const carText2 = d3.select(car2).select('text');
   const car3 = carType
     .select('.axis')
     .selectAll('.tick')
     .nodes()[17];
-  const carText3 = d3.select(car3).select('text');  
+  const carText3 = d3.select(car3).select('text');
   const car4 = carType
     .select('.axis')
     .selectAll('.tick')
     .nodes()[16];
-  const carText4 = d3.select(car4).select('text');  
+  const carText4 = d3.select(car4).select('text');
   const car5 = carType
     .select('.axis')
     .selectAll('.tick')
@@ -347,6 +367,17 @@ const removeAllHints = () => {
   carText3.style('fill', 'black').style('font-weight', 'normal');
   carText4.style('fill', 'black').style('font-weight', 'normal');
   carText5.style('fill', 'black').style('font-weight', 'normal');
+
+  // HINT 10 ELEMENTs
+  const cylinders = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[5]
+  );
+  const cylText =cylinders.select('.axis').select('.label');
+
+  cylText.style('fill', 'black');
 };
 
 export {

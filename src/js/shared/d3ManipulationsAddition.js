@@ -356,4 +356,54 @@ const hint9 = () => {
     .text('9');
 };
 
-export { hint7, hint8, hint9 };
+const hint10 = () => {
+  const cylinders = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[5]
+  );
+  const cyl = cylinders
+    .select('.axis')
+    .selectAll('.tick')
+    .nodes()[4];
+  const cylText =cylinders.select('.axis').select('.label');
+  const cylItem = d3.select(cyl);
+  const transfrom = cylItem.attr('transform');
+  let cylBox = transfrom
+    .substring(transfrom.indexOf('(') + 1, transfrom.indexOf(')'))
+    .split(',');
+  cylBox = cylBox.map(e => parseInt(e, 0));
+  const hint10Group = cylinders.append('g').classed('customD3Hints', true);
+
+  cylText.style('fill', '#c51b7d');
+
+  hint10Group
+    .append('circle')
+    .attr('r', 10)
+    .attr('cx', cylBox[0] + 30)
+    .attr('cy', cylBox[1])
+    .style('stroke', '#C51B7D')
+    .style('fill', '#C51B7D');
+
+  hint10Group
+    .append('text')
+    .attr('x', cylBox[0] + 30)
+    .attr('y', cylBox[1] + 5)
+    .style('font-size', '14px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('10');
+
+  hint10Group
+    .append('image')
+    .attr('xlink:href', 'img3.svg')
+    .attr('x', cylBox[0] - 20)
+    .attr('y', cylBox[1] - 50)
+    .attr('width', 40)
+    .attr('height', '20%')
+    .style('pointer-events', 'none');
+};
+
+export { hint7, hint8, hint9, hint10 };
