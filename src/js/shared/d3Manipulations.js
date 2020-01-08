@@ -27,7 +27,7 @@ const createHintOne = () => {
   hint1Group
     .append('text')
     .attr('x', textBox.x + 48)
-    .attr('y', textBox.y - 18)
+    .attr('y', textBox.y - 17)
     .style('font-size', '14px')
     .style('font-weight', 'bold')
     .attr('text-anchor', 'middle')
@@ -186,13 +186,35 @@ const createHintFive = () => {
       .selectAll('.dimension')
       .nodes()[1]
   );
-  const hint4Group = svgImage.append('g').classed('customD3Hints', true);
+  const axisLabel = svgImage.select('.axis').select('text');
+  const axisLabelBox = axisLabel.node().getBBox();
+  const hint5Group = svgImage.append('g').classed('customD3Hints', true);
 
-  hint4Group
+  hint5Group
+    .append('circle')
+    .attr('r', 10)
+    .attr('cx', axisLabelBox.x + axisLabelBox.width)
+    .attr('cy', axisLabelBox.y - 22)
+    .style('stroke', '#C51B7D')
+    .style('fill', '#C51B7D');
+
+  hint5Group
+    .append('text')
+    .attr('x', axisLabelBox.x + axisLabelBox.width)
+    .attr('y', axisLabelBox.y - 18)
+    .style('font-size', '14px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('5');
+
+  hint5Group
     .append('image')
     .attr('xlink:href', 'img2.svg')
+    .attr('x', axisLabelBox.x - 24)
+    .attr('y', axisLabelBox.y - 36)
     .attr('width', 100)
-    .attr('height', 100);
+    .attr('height', 40);
 
   return 5;
 };
