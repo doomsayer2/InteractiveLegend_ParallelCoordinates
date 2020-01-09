@@ -337,6 +337,16 @@ const hint9 = () => {
   carText.style('fill', '#c51b7d').style('font-weight', 'bold');
   carText2.style('fill', '#c51b7d').style('font-weight', 'bold');
 
+  const weight = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[3]
+  );
+  const weiText = weight.select('.axis').select('.label');
+
+  weiText.style('fill', '#c51b7d');
+
   hint9Group
     .append('circle')
     .attr('r', 10)

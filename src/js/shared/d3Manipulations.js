@@ -406,7 +406,18 @@ const removeAllHints = () => {
   carText4.style('fill', 'black').style('font-weight', 'normal');
   carText5.style('fill', 'black').style('font-weight', 'normal');
 
-  // HINT 10 ELEMENTs
+  // HINT 9 ELEMENTS
+  const weight = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[3]
+  );
+  const weiText = weight.select('.axis').select('.label');
+
+  weiText.style('fill', 'black');
+
+  // HINT 10 ELEMENTS
   const cylinders = d3.select(
     d3
       .select('svg')
