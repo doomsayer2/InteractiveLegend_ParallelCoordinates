@@ -3,12 +3,12 @@ const sourceData = require('./data/cars.json'); // All cities data
 const TEXTS = {
   ONE: 'Each <span class="hT">vertical axis</span> represents one attribute (e.g., acceleration).',
   TWO: 'Each line going through all axes represents a specific <span class="hT">car type</span> (e.g., Mazda RX4) and its <span class="hT">attribute</span> values (e.g., Mazda RX4 has 6 cylinders).',
-  THREE: 'Parallel lines between two adjacent axes indicate a <span class="hT">positive correlation</span> (e.g., more horsepower means heavier cars).',
-  FOUR: 'Crossing/intersecting lines between two adjacent axes (like an X-shape) show a <span class="hT">negative correlation</span> (e.g., the higher the horsepower, the lower the acceleration (mph)). ',
-  FIVE: 'Placing two axes next to each other helps to analyze their <span class="hT">relationship</span>. e.g. click on the header <span class="hT">XY</span> and move it to the right side of <span class="hT">YZ</span>. You can now analyze the relationship (line pattern) between the axis left and right to XY.',
-  SIX: '<span class="hT">Filter</span> the data based on attribute values by creating a box through <span class="hT">clicking-and-dragging</span> at the same time over the desired value range (multiple-selections are possible).',
-  SEVEN: 'The <span class="hT">acceleration</span>) of the car <span class="ht">Valiant</span> is <span class="hT">20.2 mph</span>.',
-  EIGHT: '<span class="hT">Maserati Bora</span> has 8 <span class="hT">cylinders</span>, a <span class="hT">horsepower</span> of 335.0 hp, an <span class="hT">acceleration</span> of 14.6 mph, a <span class="hT">weight</span> of 3570 lbs, and was <span class="hT">produced</span> in 1972 ',
+  THREE: '<span class="hT">Parallel lines</span> between two adjacent axes indicate a <span class="hT">positive correlation</span> (e.g., more horsepower means heavier cars).',
+  FOUR: 'Crossing/intersecting lines between two adjacent axes (like an <span class="hT">X-shape</span>) show a <span class="hT">negative correlation</span> (e.g., the higher the horsepower, the lower the acceleration (mph)). ',
+  FIVE: 'Placing two axes next to each other helps to analyze their <span class="hT">relationship</span>. e.g. click on the header <span class="hT">Weight (lbs)</span> and drag it to the left of the axis Horsepower (hp).',
+  SIX: '<span class="hT">Filter</span> the data based on attribute values (e.g. ProdYear) by creating a box through <span class="hT">clicking-and-dragging</span> at the same time over the desired value range (multiple-selections are possible).',
+  SEVEN: 'The <span class="hT">acceleration</span> of the car <span class="hT">Chrysler Valiant</span> is <span class="hT">20.2 mph</span>.',
+  EIGHT: '<span class="hT">Maserati Bora</span> has an <span class="hT">accelaration</span> of 14.6 mph, a <span class="hT">horsepower</span> of 335.0 hp, a <span class="hT">weight</span> of 3570 lbs, was <span class="hT">produced</span> in 1972 and has 8 <span class="hT">cylinders</span>.',
   NINE: 'The car <span class="hT">Lincoln Continental</span> has a higher <span class="hT">weight</span> than the <span class="hT">Lotus Europa</span>.',
   TEN: 'The <span class="hT">more cylinders</span> a car has, the <span class="hT">more Horsepower (hp)</span> it has.'
 };

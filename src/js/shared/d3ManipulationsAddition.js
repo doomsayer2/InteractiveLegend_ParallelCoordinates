@@ -374,9 +374,19 @@ const hint10 = () => {
     .substring(transfrom.indexOf('(') + 1, transfrom.indexOf(')'))
     .split(',');
   cylBox = cylBox.map(e => parseInt(e, 0));
+
+  const horsepower = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[2]
+  );
+  const hpText = horsepower.select('.axis').select('.label');
+
   const hint10Group = cylinders.append('g').classed('customD3Hints', true);
 
   cylText.style('fill', '#c51b7d');
+  hpText.style('fill', '#c51b7d');
 
   hint10Group
     .append('circle')

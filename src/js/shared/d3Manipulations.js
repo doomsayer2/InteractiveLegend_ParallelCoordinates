@@ -13,7 +13,7 @@ const createHintOne = () => {
   const textBox = axisText.node().getBBox();
   const hint1Group = accel.append('g').classed('customD3Hints', true);
 
-  axisPath.style('stroke', '#c51b7d');
+  axisPath.style('stroke', '#c51b7d').style('stroke-width', 2);
   axisText.style('fill', '#c51b7d');
 
   hint1Group
@@ -59,6 +59,44 @@ const createHintTwo = () => {
   const hint2Group = carType.append('g').classed('customD3Hints', true);
 
   carText.style('fill', '#c51b7d').style('font-weight', 'bold');
+
+  const cylinders = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[5]
+  );
+  const cyl = d3.select(
+    cylinders
+      .select('.axis')
+      .selectAll('.tick')
+      .nodes()[2]
+  );
+  const transform6 = cyl.attr('transform');
+  let cylBox = transform6
+    .substring(transform6.indexOf('(') + 1, transform6.indexOf(')'))
+    .split(',');
+  cylBox = cylBox.map(e => parseInt(e, 0));
+
+  const hint2GroupA = cylinders.append('g').classed('customD3Hints', true);
+
+  hint2GroupA
+    .append('circle')
+    .attr('r', 5)
+    .attr('cx', cylBox[0])
+    .attr('cy', cylBox[1])
+    .style('stroke', '#C51B7D')
+    .style('fill', '#C51B7D');
+
+  hint2GroupA
+    .append('text')
+    .attr('x', cylBox[0])
+    .attr('y', cylBox[1] + 3)
+    .style('font-size', '8px')
+    .style('font-weight', 'bold')
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'white')
+    .text('2');
 
   hint2Group
     .append('circle')
@@ -124,7 +162,7 @@ const createHintThree = () => {
     .attr('x', powerBox[0] - 20)
     .attr('y', powerBox[1] + 5)
     .attr('width', '20%')
-    .attr('height', '100px')
+    .attr('height', '120px')
     .style('fill', '#C51B7D')
     .style('opacity', '0.1');
 
@@ -133,7 +171,7 @@ const createHintThree = () => {
     .attr('x', powerBox[0] - 20)
     .attr('y', powerBox[1] + 5)
     .attr('width', '20%')
-    .attr('height', '100px')
+    .attr('height', '120px')
     .style('fill', 'transparent')
     .style('stroke', '#C51B7D')
     .style('stroke-dasharray', '10,5')
@@ -326,7 +364,7 @@ const removeAllHints = () => {
   const axisPath = accel.select('.axis').select('path');
   const axisText = accel.select('.axis').select('text');
 
-  axisPath.style('stroke', 'rgb(34, 34, 34)');
+  axisPath.style('stroke', 'rgb(34, 34, 34)').style('stroke-width', 1);
   axisText.style('fill', 'black');
 
   // HINT 2,7,8 ELEMENTS
@@ -375,9 +413,18 @@ const removeAllHints = () => {
       .selectAll('.dimension')
       .nodes()[5]
   );
-  const cylText =cylinders.select('.axis').select('.label');
+  const cylText = cylinders.select('.axis').select('.label');
+
+  const horsepower = d3.select(
+    d3
+      .select('svg')
+      .selectAll('.dimension')
+      .nodes()[2]
+  );
+  const hpText = horsepower.select('.axis').select('.label');
 
   cylText.style('fill', 'black');
+  hpText.style('fill', 'black');
 };
 
 export {
