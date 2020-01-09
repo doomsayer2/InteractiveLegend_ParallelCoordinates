@@ -4,9 +4,9 @@ This is just a clone of the original template which implements the parallel coor
 Original: [Interactive Legend](https://github.com/doomsayer2/InteractiveLegend)
 
 ### Special libraries used for this visualization:
-[Parallel Coordinates Lib Original](https://github.com/syntagmatic/parallel-coordinates) -- the original library which is relying on d3 which was later convertet to es6.
-[Parallel Coordinates Lib ES6](https://github.com/syntagmatic/parallel-coordinates) -- which ported the original library and made it easier usable in react.
-[React Sticky El](https://github.com/gm0t/react-sticky-el) -- in order to move the visualization with scroll as the amount of hints increases with complex visualization.
+- [Parallel Coordinates Lib Original](https://github.com/syntagmatic/parallel-coordinates) -- the original library which is relying on d3 which was later convertet to es6.
+- [Parallel Coordinates Lib ES6](https://github.com/syntagmatic/parallel-coordinates) -- which ported the original library and made it easier usable in react.
+- [React Sticky El](https://github.com/gm0t/react-sticky-el) -- in order to move the visualization with scroll as the amount of hints increases with complex visualization.
 
 ### Additional resources and information:
 TODO...
