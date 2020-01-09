@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import parse from 'html-react-parser';
+import Sticky from 'react-sticky-el';
 // import VegaChart from './views/VegaChart';
 import D3Chart from './views/D3Chart';
 import Legend from './Legend';
@@ -120,9 +121,10 @@ class App extends Component {
             <div id="vizMain">
               <Row type="flex" justify="start">
                 <Col md={15} lg={17} xxl={12}>
-                  <Row type="flex" justify="center" style={{marginLeft: -100 + 'px'}}>
-                    {/* <VegaChart mode={mode} view={view} chartID={1} /> */}
-                    <D3Chart mode={mode} />
+                  <Row style={{marginLeft: -100 + 'px'}}>
+                    <Sticky>
+                      <D3Chart mode={mode} />
+                    </Sticky>
                   </Row>
                 </Col>
                 <Col md={9} lg={7} xxl={8}>
