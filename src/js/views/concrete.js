@@ -4,7 +4,7 @@ const TEXTS = {
   ONE: 'Each <span class="hT">vertical axis</span> represents one attribute (e.g., acceleration).',
   TWO: 'Each line going through all axes represents a specific <span class="hT">car type</span> (e.g., Mazda RX4) and its <span class="hT">attribute</span> values (e.g., Mazda RX4 has 6 cylinders).',
   THREE: '<span class="hT">Parallel lines</span> between two adjacent axes indicate a <span class="hT">positive correlation</span> (e.g., more horsepower means heavier cars).',
-  FOUR: 'Crossing/intersecting lines between two adjacent axes (like an <span class="hT">X-shape</span>) indicate a <span class="hT">negative correlation</span> (e.g., the higher the horsepower, the lower the acceleration (mph)). ',
+  FOUR: 'Crossing/intersecting lines between two adjacent axes (like an <span class="hT">X-shape</span>) indicate a <span class="hT">negative correlation</span> (e.g., the higher the horsepower, the lower the acceleration (mpg)). ',
   FIVE: 'Placing two axes next to each other helps to analyze their <span class="hT">relationship</span>. For example, click on the header <span class="hT">Weight (lbs)</span> and drag it to the left of the axis Horsepower (hp).',
   SIX: '<span class="hT">Filter</span> the data based on attribute values (e.g., ProdYear) by creating a box through <span class="hT">clicking-and-dragging</span> at the same time over the desired value range (multiple-selections are possible).',
   SEVEN: 'The <span class="hT">acceleration</span> of the car <span class="hT">Chrysler Valiant</span> is <span class="hT">20.2 mph</span>.',

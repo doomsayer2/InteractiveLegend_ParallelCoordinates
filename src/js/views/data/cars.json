@@ -1,7 +1,7 @@
 [
   {
     "Name": "AMC Javelin",
-    "Acceleration (mph)": 17.3,
+    "Acceleration (mpg)": 17.3,
     "Horsepower (hp)": 150,
     "Weight (lbs)": 3435,
     "ProdYear": 1967,
@@ -9,7 +9,7 @@
   },
   {
     "Name": "Cadillac Fleetwood",
-    "Acceleration (mph)": 17.98,
+    "Acceleration (mpg)": 17.98,
     "Horsepower (hp)": 205,
     "Weight (lbs)": 5250,
     "ProdYear": 1946,
@@ -17,7 +17,7 @@
   },
   {
     "Name": "Camaro Z28",
-    "Acceleration (mph)": 15.41,
+    "Acceleration (mpg)": 15.41,
     "Horsepower (hp)": 245,
     "Weight (lbs)": 3840,
     "ProdYear": 1966,
@@ -25,7 +25,7 @@
   },
   {
     "Name": "Chrysler Imperial",
-    "Acceleration (mph)": 17.42,
+    "Acceleration (mpg)": 17.42,
     "Horsepower (hp)": 230,
     "Weight (lbs)": 5345,
     "ProdYear": 1955,
@@ -33,7 +33,7 @@
   },
   {
     "Name": "Datsun 710",
-    "Acceleration (mph)": 18.61,
+    "Acceleration (mpg)": 18.61,
     "Horsepower (hp)": 93,
     "Weight (lbs)": 2320,
     "ProdYear": 1973,
@@ -41,7 +41,7 @@
   },
   {
     "Name": "Dodge Challenger",
-    "Acceleration (mph)": 16.87,
+    "Acceleration (mpg)": 16.87,
     "Horsepower (hp)": 150,
     "Weight (lbs)": 3520,
     "ProdYear": 1969,
@@ -49,7 +49,7 @@
   },
   {
     "Name": "Duster 360",
-    "Acceleration (mph)": 15.84,
+    "Acceleration (mpg)": 15.84,
     "Horsepower (hp)": 245,
     "Weight (lbs)": 3570,
     "ProdYear": 1970,
@@ -57,7 +57,7 @@
   },
   {
     "Name": "Ferrari Dino",
-    "Acceleration (mph)": 15.5,
+    "Acceleration (mpg)": 15.5,
     "Horsepower (hp)": 175,
     "Weight (lbs)": 2770,
     "ProdYear": 1967,
@@ -65,7 +65,7 @@
   },
   {
     "Name": "Fiat 128",
-    "Acceleration (mph)": 19.47,
+    "Acceleration (mpg)": 19.47,
     "Horsepower (hp)": 66,
     "Weight (lbs)": 2200,
     "ProdYear": 1969,
@@ -73,7 +73,7 @@
   },
   {
     "Name": "Fiat X1-9",
-    "Acceleration (mph)": 18.9,
+    "Acceleration (mpg)": 18.9,
     "Horsepower (hp)": 66,
     "Weight (lbs)": 1935,
     "ProdYear": 1972,
@@ -81,7 +81,7 @@
   },
   {
     "Name": "Ford Pantera L",
-    "Acceleration (mph)": 14.5,
+    "Acceleration (mpg)": 14.5,
     "Horsepower (hp)": 264,
     "Weight (lbs)": 3170,
     "ProdYear": 1971,
@@ -89,7 +89,7 @@
   },
   {
     "Name": "Honda Civic",
-    "Acceleration (mph)": 18.52,
+    "Acceleration (mpg)": 18.52,
     "Horsepower (hp)": 52,
     "Weight (lbs)": 1615,
     "ProdYear": 1972,
@@ -97,7 +97,7 @@
   },
   {
     "Name": "Hornet 4 Drive",
-    "Acceleration (mph)": 19.44,
+    "Acceleration (mpg)": 19.44,
     "Horsepower (hp)": 110,
     "Weight (lbs)": 3215,
     "ProdYear": 1969,
@@ -105,7 +105,7 @@
   },
   {
     "Name": "Hornet Sportabout",
-    "Acceleration (mph)": 17.02,
+    "Acceleration (mpg)": 17.02,
     "Horsepower (hp)": 175,
     "Weight (lbs)": 3440,
     "ProdYear": 1971,
@@ -113,7 +113,7 @@
   },
   {
     "Name": "Lincoln Continental",
-    "Acceleration (mph)": 17.82,
+    "Acceleration (mpg)": 17.82,
     "Horsepower (hp)": 215,
     "Weight (lbs)": 5424,
     "ProdYear": 1940,
@@ -121,7 +121,7 @@
   },
   {
     "Name": "Lotus Europa",
-    "Acceleration (mph)": 16.9,
+    "Acceleration (mpg)": 16.9,
     "Horsepower (hp)": 113,
     "Weight (lbs)": 1513,
     "ProdYear": 1966,
@@ -129,7 +129,7 @@
   },
   {
     "Name": "Maserati Bora",
-    "Acceleration (mph)": 14.6,
+    "Acceleration (mpg)": 14.6,
     "Horsepower (hp)": 335,
     "Weight (lbs)": 3570,
     "ProdYear": 1972,
@@ -137,7 +137,7 @@
   },
   {
     "Name": "Mazda RX4",
-    "Acceleration (mph)": 16.46,
+    "Acceleration (mpg)": 16.46,
     "Horsepower (hp)": 110,
     "Weight (lbs)": 2620,
     "ProdYear": 1972,
@@ -145,7 +145,7 @@
   },
   {
     "Name": "Mazda RX4 Wag",
-    "Acceleration (mph)": 17.02,
+    "Acceleration (mpg)": 17.02,
     "Horsepower (hp)": 110,
     "Weight (lbs)": 2875,
     "ProdYear": 1972,
@@ -153,7 +153,7 @@
   },
   {
     "Name": "Merc 230",
-    "Acceleration (mph)": 22.9,
+    "Acceleration (mpg)": 22.9,
     "Horsepower (hp)": 95,
     "Weight (lbs)": 3150,
     "ProdYear": 1977,
@@ -161,7 +161,7 @@
   },
   {
     "Name": "Merc 240D",
-    "Acceleration (mph)": 20,
+    "Acceleration (mpg)": 20,
     "Horsepower (hp)": 62,
     "Weight (lbs)": 3190,
     "ProdYear": 1976,
@@ -169,7 +169,7 @@
   },
   {
     "Name": "Merc 280",
-    "Acceleration (mph)": 18.3,
+    "Acceleration (mpg)": 18.3,
     "Horsepower (hp)": 123,
     "Weight (lbs)": 3440,
     "ProdYear": 1977,
@@ -177,7 +177,7 @@
   },
   {
     "Name": "Merc 280C",
-    "Acceleration (mph)": 18.9,
+    "Acceleration (mpg)": 18.9,
     "Horsepower (hp)": 123,
     "Weight (lbs)": 3440,
     "ProdYear": 1977,
@@ -185,7 +185,7 @@
   },
   {
     "Name": "Merc 450SE",
-    "Acceleration (mph)": 17.4,
+    "Acceleration (mpg)": 17.4,
     "Horsepower (hp)": 180,
     "Weight (lbs)": 4070,
     "ProdYear": 1973,
@@ -193,7 +193,7 @@
   },
   {
     "Name": "Merc 450SL",
-    "Acceleration (mph)": 17.6,
+    "Acceleration (mpg)": 17.6,
     "Horsepower (hp)": 180,
     "Weight (lbs)": 3730,
     "ProdYear": 1972,
@@ -201,7 +201,7 @@
   },
   {
     "Name": "Merc 450SLC",
-    "Acceleration (mph)": 18,
+    "Acceleration (mpg)": 18,
     "Horsepower (hp)": 180,
     "Weight (lbs)": 3780,
     "ProdYear": 1971,
@@ -209,7 +209,7 @@
   },
   {
     "Name": "Pontiac Firebird",
-    "Acceleration (mph)": 17.05,
+    "Acceleration (mpg)": 17.05,
     "Horsepower (hp)": 175,
     "Weight (lbs)": 3845,
     "ProdYear": 1967,
@@ -217,7 +217,7 @@
   },
   {
     "Name": "Porsche 914-2",
-    "Acceleration (mph)": 16.7,
+    "Acceleration (mpg)": 16.7,
     "Horsepower (hp)": 91,
     "Weight (lbs)": 2140,
     "ProdYear": 1973,
@@ -225,7 +225,7 @@
   },
   {
     "Name": "Toyota Corolla",
-    "Acceleration (mph)": 19.9,
+    "Acceleration (mpg)": 19.9,
     "Horsepower (hp)": 65,
     "Weight (lbs)": 1835,
     "ProdYear": 1966,
@@ -233,7 +233,7 @@
   },
   {
     "Name": "Toyota Corona",
-    "Acceleration (mph)": 20.01,
+    "Acceleration (mpg)": 20.01,
     "Horsepower (hp)": 97,
     "Weight (lbs)": 2465,
     "ProdYear": 1957,
@@ -241,7 +241,7 @@
   },
   {
     "Name": "Chrysler Valiant",
-    "Acceleration (mph)": 20.22,
+    "Acceleration (mpg)": 20.22,
     "Horsepower (hp)": 105,
     "Weight (lbs)": 3460,
     "ProdYear": 1962,
@@ -249,7 +249,7 @@
   },
   {
     "Name": "Volvo 142E",
-    "Acceleration (mph)": 18.6,
+    "Acceleration (mpg)": 18.6,
     "Horsepower (hp)": 109,
     "Weight (lbs)": 2780,
     "ProdYear": 1966,

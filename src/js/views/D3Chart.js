@@ -6,7 +6,7 @@ import '../../css/d3chart.css';
 
 const dimensions = {
   Name: { type: 'string' },
-  'Acceleration (mph)': {
+  'Acceleration (mpg)': {
     type: 'number',
     ticks: 20
   },
@@ -59,7 +59,7 @@ export default class D3Chart extends Component {
       .interactive(); // Trigger the rerenders when changed after render
 
     // Custom adaptations based on the current data
-    graph.scale('Acceleration (mph)', [14, 23]);
+    graph.scale('Acceleration (mpg)', [14, 23]);
     graph.scale('Horsepower (hp)', [40, 340]);
     graph.scale('Weight (lbs)', [1400, 5600]);
     graph.flipAxes(['Name']);
